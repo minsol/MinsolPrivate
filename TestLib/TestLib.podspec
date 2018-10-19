@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
     s.license      = { :type => 'MIT', :file => 'LICENSE'  }
     s.author             = { "wanjian" => "wanjian@a8sport.com" }
     s.source       = { :git => "https://github.com/minsol/MinsolPrivate.git", :tag => "#{s.version}" }
-    s.source_files  =  'Classes/Person.h'
-    s.public_header_files = 'Classes/Person.h'
+    s.source_files  =  'TestLib/Classes/Person.h'
+    s.public_header_files = 'TestLib/Classes/Person.h'
     s.ios.deployment_target = '7.0'
 
     s.frameworks = "Foundation","UIKit"
