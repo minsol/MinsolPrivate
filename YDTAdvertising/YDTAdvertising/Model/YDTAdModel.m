@@ -19,6 +19,13 @@
    
     [super setValue:value forKey:key];
 }
+
+-(CGFloat)adHeight{
+    if (self.showType == A8AdvertisingViewTypeLargeImageWithTitle) {
+        return (ScreenWidth - 24) * 0.5 + 73;
+    }
+    return 95.0f;
+}
 @end
 
 
