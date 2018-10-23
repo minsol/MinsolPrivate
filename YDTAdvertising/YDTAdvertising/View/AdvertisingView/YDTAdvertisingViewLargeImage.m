@@ -27,11 +27,11 @@
 -(void)setUpConstraints{
     [super setUpConstraints];
     [self.advertisingImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(12, 12, 16,12));
+        make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(12, 12, 12,12));
     }];
     [self.advertisingTagView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.advertisingImage.mas_right).offset(-8);
-        make.top.equalTo(self.advertisingImage.mas_top).offset(8);
+        make.right.equalTo(self.advertisingImage.mas_right).mas_offset(-8);
+        make.top.equalTo(self.advertisingImage.mas_top).mas_offset(8);
         make.width.equalTo(@32);
         make.height.equalTo(@16);
     }];
