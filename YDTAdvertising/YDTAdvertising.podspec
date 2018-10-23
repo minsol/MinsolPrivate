@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name          = 'YDTAdvertising'
-    s.version       = '2.0.12'
+    s.version       = '2.0.13'
     s.summary       = 'YDTAdvertising广告私有库.'
     s.homepage      = "https://github.com/minsol/MinsolPrivate.git"
     s.license       = { :type => 'MIT', :file => 'LICENSE'  }
