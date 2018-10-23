@@ -1,5 +1,5 @@
 //
-//  YDTBaseModel.h
+//  YDTAdBaseModel.h
 //  A8TV_IPhone
 //
 //  Created by Minsol on 2018/4/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YDTBaseModel : NSObject
+@interface YDTAdBaseModel : NSObject
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 

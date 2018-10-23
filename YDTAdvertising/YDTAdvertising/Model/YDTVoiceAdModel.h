@@ -6,10 +6,10 @@
 //  Copyright © 2018年 New Sense Networks Technology Co., Ltd. All rights reserved.
 //
 
-#import "YDTBaseModel.h"
+#import "YDTAdBaseModel.h"
 
 /// 讯飞广告类型
-@interface YDTVoiceAdModel : YDTBaseModel
+@interface YDTVoiceAdModel : YDTAdBaseModel
 @property (nonatomic, copy) NSString *adtype; /**< 广告交互类型(跳 转类、下载类、品 牌类)，redirect/download/brand */
 @property (nonatomic, copy) NSString *batch_cnt; /**< 本次下发的广告 数目 */
 @property (nonatomic, strong) NSArray *batch_ma; /**< 广告列表 */
@@ -23,7 +23,7 @@
 
 
 
-@interface YDTVoiceModel : YDTBaseModel
+@interface YDTVoiceModel : YDTAdBaseModel
 @property (nonatomic, copy) NSString *ad_source_mark; /**< 广告来源 */
 @property (nonatomic, copy) NSString *adtype; /**< 广告交互类型(跳 转类、下载类、品 牌类)，redirect/download/brand */
 @property (nonatomic, strong) NSArray *click_url; /**< 点击监控数组 用户点击后触 发*/

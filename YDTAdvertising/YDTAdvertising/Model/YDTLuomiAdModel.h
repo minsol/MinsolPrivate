@@ -6,10 +6,10 @@
 //Copyright © 2018年 New Sense Networks Technology Co., Ltd. All rights reserved.
 //
 
-#import "YDTBaseModel.h"
+#import "YDTAdBaseModel.h"
 
 /// 洛米广告模型
-@interface YDTLuomiAdModel : YDTBaseModel
+@interface YDTLuomiAdModel : YDTAdBaseModel
 
 #pragma mark - Property
 

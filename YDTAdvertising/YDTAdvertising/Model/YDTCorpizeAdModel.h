@@ -6,12 +6,12 @@
 //Copyright © 2018年 New Sense Networks Technology Co., Ltd. All rights reserved.
 //
 
-#import "YDTBaseModel.h"
+#import "YDTAdBaseModel.h"
 
 @class YDTCorpizeNativeLinkModel, YDTCorpizeNativeModel, YDTCorpizeExtModel;
 
 /// 惠头条广告
-@interface YDTCorpizeAdModel : YDTBaseModel
+@interface YDTCorpizeAdModel : YDTAdBaseModel
 
 #pragma mark - Property
 
@@ -22,7 +22,7 @@
 
 @end
 
-@interface YDTCorpizeNativeModel : YDTBaseModel
+@interface YDTCorpizeNativeModel : YDTAdBaseModel
 
 #pragma mark - Property
 
@@ -36,7 +36,7 @@
 
 @end
 
-@interface YDTCorpizeNativeLinkModel : YDTBaseModel
+@interface YDTCorpizeNativeLinkModel : YDTAdBaseModel
 
 #pragma mark - Property
 
@@ -49,7 +49,7 @@
 @end
 
 
-@interface YDTCorpizeExtModel : YDTBaseModel
+@interface YDTCorpizeExtModel : YDTAdBaseModel
 
 #pragma mark - Property
 @property (nonatomic, copy) NSString *action; /**< 操作  0-未确认 1-APP WebView 2-系统浏览器 3-打开地图 4-拨打电话 5-播放视频 6-下载APP 7-deeplink链接 */

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 New Sense Networks Technology Co., Ltd.. All rights reserved.
 //
 
-#import "YDTBaseModel.h"
+#import "YDTAdBaseModel.h"
 #import "YDTLuomiAdModel.h"
 #import "GDTNativeAd.h"
 #import "YDTCorpizeAdModel.h"
@@ -15,7 +15,7 @@
 @class IMNative;
 @class GDTNativeAdData;
 
-@interface YDTAdModel : YDTBaseModel
+@interface YDTAdModel : YDTAdBaseModel
 
 @property (nonatomic, copy) NSString *nId;
 @property (nonatomic, copy) NSString *nType;/**< 0 ：无跳转 1：下载APP 2：内部H5 3：外部H5 4： Inmobi 5：小爱广告 6：广点通 998：首页红包 999：首页彩券*/
