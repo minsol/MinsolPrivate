@@ -7,6 +7,8 @@
 //
 
 #import "YDTNewsTagView.h"
+#define HEX_COLOR(hex) [UIColor colorWithRed:((hex&0xff0000)>>16)/255.0 green:((hex&0x00ff00)>>8)/255.0 blue:((hex&0xff)>>0)/255.0 alpha:1]
+#define HEX_COLOR_ALPHA(hex,a) [UIColor colorWithRed:((hex&0xff0000)>>16)/255.0 green:((hex&0x00ff00)>>8)/255.0 blue:((hex&0xff)>>0)/255.0 alpha:a]   //十六进制颜色宏，带透明度
 
 @interface YDTNewsTagView()
 #pragma mark - Property
@@ -77,46 +79,46 @@
         caseYDTNewsTagTypeTopic:
             self.hidden = false;
             self.tagTitleLabel.text = @"话题";
-//            self.tagTitleLabel.textColor = HEX_COLOR(0x438ADD);
-//            self.leftView.backgroundColor = HEX_COLOR(0x438ADD);
-//            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x438ADD,0.2);
+            self.tagTitleLabel.textColor = HEX_COLOR(0x438ADD);
+            self.leftView.backgroundColor = HEX_COLOR(0x438ADD);
+            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x438ADD,0.2);
             break;
         caseYDTNewsTagTypeHotPost:
             self.hidden = false;
             self.tagTitleLabel.text = @"热门";
-//            self.tagTitleLabel.textColor = HEX_COLOR(0xFF7A45);
-//            self.leftView.backgroundColor = HEX_COLOR(0xFF7A45);
-//            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFF7A45,0.2);
+            self.tagTitleLabel.textColor = HEX_COLOR(0xFF7A45);
+            self.leftView.backgroundColor = HEX_COLOR(0xFF7A45);
+            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFF7A45,0.2);
 
             break;
         caseYDTNewsTagTypeActivity:
             self.hidden = false;
             self.tagTitleLabel.text = @"活动";
-//            self.tagTitleLabel.textColor = HEX_COLOR(0xFFAD00);
-//            self.leftView.backgroundColor = HEX_COLOR(0xFFAD00);
-//            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFFAD00,0.2);
+            self.tagTitleLabel.textColor = HEX_COLOR(0xFFAD00);
+            self.leftView.backgroundColor = HEX_COLOR(0xFFAD00);
+            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFFAD00,0.2);
 
             break;
         caseYDTNewsTagTypeDiscuss:
             self.hidden = false;
             self.tagTitleLabel.text = @"讨论";
-//            self.tagTitleLabel.textColor = HEX_COLOR(0x71C527);
-//            self.leftView.backgroundColor = HEX_COLOR(0x71C527);
-//            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x71C527,0.2);
+            self.tagTitleLabel.textColor = HEX_COLOR(0x71C527);
+            self.leftView.backgroundColor = HEX_COLOR(0x71C527);
+            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x71C527,0.2);
             break;
         caseYDTNewsTagTypeAdvertising:
             self.hidden = false;
             self.tagTitleLabel.text = @"广告";
-//            self.tagTitleLabel.textColor = HEX_COLOR(0x888888);
-//            self.leftView.backgroundColor = HEX_COLOR(0x888888);
-//            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x888888,0.2);
+            self.tagTitleLabel.textColor = HEX_COLOR(0x888888);
+            self.leftView.backgroundColor = HEX_COLOR(0x888888);
+            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x888888,0.2);
             break;
         caseYDTNewsTagTypeCustom:
             self.hidden = false;
             self.tagTitleLabel.text = @"";
-//            self.tagTitleLabel.textColor = HEX_COLOR(0xFA541C);
-//            self.leftView.backgroundColor = HEX_COLOR(0xFA541C);
-//            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFA541C,0.2);
+            self.tagTitleLabel.textColor = HEX_COLOR(0xFA541C);
+            self.leftView.backgroundColor = HEX_COLOR(0xFA541C);
+            self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFA541C,0.2);
             break;
         default:
             self.hidden = true;
