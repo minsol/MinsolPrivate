@@ -45,9 +45,9 @@
     
     // 名称
     [self.advertisingTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.advertisingImage.mas_right);
+        make.left.equalTo(self.advertisingImage.mas_right).mas_offset(8);
         make.top.equalTo(self.advertisingImage.mas_top);
-        make.right.equalTo(self.enterImageView.mas_left);
+        make.right.equalTo(self.enterImageView.mas_left).mas_offset(-27);
     }];
     
     // 描述
@@ -58,7 +58,7 @@
     
     // 进入按钮
     [self.enterImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView);
+        make.right.equalTo(self.contentView).mas_offset(-12);
         make.centerY.equalTo(self.contentView);
         make.width.mas_equalTo(@50);
         make.height.mas_equalTo(@24);

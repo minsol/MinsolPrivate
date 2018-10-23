@@ -41,27 +41,27 @@
     [super setUpConstraints];
     // 广告标题
     [self.advertisingTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self.contentView).mas_offset(8);
-        make.right.equalTo(self.contentView).mas_offset(8);
+        make.left.top.equalTo(self.contentView).mas_offset(12);
+        make.right.equalTo(self.contentView).mas_offset(12);
     }];
     
     // 广告图片
     [self.advertisingImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.advertisingTitle.mas_bottom).mas_offset(4);
         make.left.right.equalTo(self.advertisingTitle);
-        make.bottom.equalTo(self.advertisingSubTitel.mas_top);
+        make.bottom.equalTo(self.advertisingSubTitel.mas_top).mas_offset(-4);
     }];
     
     // 广告描述
     [self.advertisingSubTitel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.advertisingTagView);
         make.left.equalTo(self.advertisingTitle);
-        make.right.equalTo(self.advertisingTagView.mas_left);
+        make.right.equalTo(self.advertisingTagView.mas_left).mas_offset(-12);
     }];
     
     // 广告标签
     [self.advertisingTagView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView).mas_offset(-4);
+        make.right.equalTo(self.contentView).mas_offset(-12);
         make.bottom.equalTo(self.contentView).mas_offset(-4);
         make.width.equalTo(@32);
         make.height.equalTo(@16);
