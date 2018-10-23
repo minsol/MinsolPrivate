@@ -9,6 +9,8 @@
 #import "YDTVoiceAd.h"
 #import "YDTVoiceAdModel.h"
 #import "AdHeader.h"
+#import "YDTAdNetWorkManager.h"
+
 @implementation YDTVoiceAd
 
 + (instancetype)sharedInstance{
@@ -96,7 +98,23 @@
         }
     }
 }
-
+-(void)GETHttpRequest:(NSString *)urlString param:(NSDictionary *)param success:(void (^)(id))success failure:(void (^)(NSError *))failure{
+    YDTAdNetWorkManager *manager = [YDTAdNetWorkManager sharedManager];
+    [manager addCookie];
+    [manager addUserAgent];
+    [manager GET:urlString
+      parameters:param
+         success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+             if (success) {
+                 success(responseObject);
+             }
+         }
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
+             if (failure) {
+                 failure(error);
+             }
+         }];
+}
 
 - (NSDictionary *)addBaseParameWithParameter:(NSDictionary *)para {
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:para];

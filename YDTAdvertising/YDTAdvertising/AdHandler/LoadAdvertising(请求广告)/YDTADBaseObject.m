@@ -8,10 +8,7 @@
 
 #import "YDTADBaseObject.h"
 #import <sys/utsname.h>
-
-@interface YDTADBaseObject ()
-@property (nonatomic, strong) NSURLSession *sharedSession;
-@end
+#import "YDTAdNetWorkManager.h"
 
 
 @implementation YDTADBaseObject
@@ -21,7 +18,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
-        sharedInstance.sharedSession = [NSURLSession sharedSession];
         sharedInstance.userHost = @"";
     });
     return sharedInstance;
@@ -47,59 +43,37 @@
                   param:(NSDictionary *)param
                 success:(void(^)(id responseObject))success
                 failure:(void(^)(NSError *error))failure{
-    //3.创建可变的请求对象
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-    
-    //4.修改请求方法为POST
-    request.HTTPMethod = @"POST";
-    
-    //5.设置请求体
-    request.HTTPBody =  [NSJSONSerialization dataWithJSONObject:param options:NSJSONWritingPrettyPrinted error:nil];
-    
-    //6.根据会话对象创建一个Task(发送请求）
-    /*
-     第一个参数：请求对象
-     第二个参数：completionHandler回调（请求完成【成功|失败】的回调）
-     data：响应体信息（期望的数据）
-     response：响应头信息，主要是对服务器端的描述
-     error：错误信息，如果请求失败，则error有值
-     */
-    NSURLSessionDataTask *dataTask = [self.sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        //8.解析数据
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        NSLog(@"%@",dict);
-        
-    }];
-    
-    //7.执行任务
-    [dataTask resume];
+    YDTAdNetWorkManager *manager = [YDTAdNetWorkManager sharedManager];
+    [manager addCookie];
+    [manager POST:urlString
+       parameters:param
+          success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+              NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+              if (success) {
+                  success(jsonDict);
+              }
+          }
+          failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
+              if (failure) {
+                  failure(error);
+              }
+          }];
 }
 
 - (void)GETHttpRequest:(NSString *)urlString
                  param:(NSDictionary *)param
                success:(void(^)(id responseObject))success
                failure:(void(^)(NSError *error))failure{
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSMutableString *userAgent = [NSMutableString stringWithString:[[UIWebView new] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"]];
-    config.HTTPAdditionalHeaders = @{
-                                            @"Accept": @"application/json",
-                                            @"Accept-Language": @"en",
-                                            @"User-Agent": userAgent
-                                            };
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error == nil) {
-            //6.解析服务器返回的数据
-            //说明：（此处返回的数据是JSON格式的，因此使用NSJSONSerialization进行反序列化处理）
-            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            
-            NSLog(@"%@",dict);
-        }
-    }];
-    [dataTask resume];
+    YDTAdNetWorkManager *manager = [YDTAdNetWorkManager sharedManager];
+    [manager addCookie];
+    [manager GET:urlString
+      parameters:param
+         success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+             if (success) {success(responseObject);}
+         }
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
+             if (failure) {failure(error);}
+         }];
 }
 
 - (BOOL)isPortrait {

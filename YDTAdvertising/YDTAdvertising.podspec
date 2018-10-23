@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name          = 'YDTAdvertising'
-    s.version       = '2.0.8'
+    s.version       = '2.0.9'
     s.summary       = 'YDTAdvertising广告私有库.'
     s.homepage      = "https://github.com/minsol/MinsolPrivate.git"
     s.license       = { :type => 'MIT', :file => 'LICENSE'  }
@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
     s.dependency "InMobiSDK"
     s.dependency "Masonry"
     s.dependency "OpenUDID"
+    s.dependency "AFNetworking"
 
     # 表示建立一个名字为 xxx 的子文件夹，可以将文件分类
     s.subspec 'GDT_iOS_SDK_4.8.0' do |ss|

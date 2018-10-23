@@ -14,7 +14,7 @@
 #import "YDTGDTAd.h"
 #import "YDTVoiceAd.h"
 #import "YDTCorpizeAd.h"
-
+#import "YDTAdNetWorkManager.h"
 
 @interface YDTAdHandler ()
 @property (nonatomic, strong) dispatch_group_t group;
@@ -46,6 +46,8 @@
         self.corpizedAd = [YDTCorpizeAd sharedInstance];
         self.voiceAd = [YDTVoiceAd sharedInstance];
         self.group = dispatch_group_create();
+        self.baseParma = [NSDictionary dictionary];
+        self.userID = @"";
     }
     return self;
 }
@@ -74,42 +76,53 @@
  @param complete 完成回调
  */
 - (void)getAdDataWithADKey:(NSString *)adKey complete:(Complete)complete {
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://test.api.a8tiyu.com/ad/query?a8id=128014351199&app=com.fungo.a8news&channel=AppStore&iVersion=4.6.0&key=A8_iOS_AD_HOME_COLLECTION&location=%E4%B8%AD%E5%9B%BD-%E5%B9%BF%E4%B8%9C%E7%9C%81-%E6%B7%B1%E5%9C%B3%E5%B8%82&platform=iOS&sign=f6bf9dbf59ba1d76e64cd6ebc555741e&time=1540183356&uid=128014351199&version=300400"]];
-    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error == nil) {
-            //6.解析服务器返回的数据
-            //说明：（此处返回的数据是JSON格式的，因此使用NSJSONSerialization进行反序列化处理）
-            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            if (error) {
-                error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
-                if (complete) {complete(error, nil);}return;
-            }
-            
-            NSArray *dataArray = dict[@"data"];
-            if (!dataArray || ![dataArray isKindOfClass:[NSArray class]] || dataArray.count <= 0) {
-                error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
-                if (complete) {complete(error, nil);}return;
-            }
-            
-            NSArray *adArray = @[[[YDTAdModel alloc] initWithDictionary:dataArray[0]]];
-            if (error) {
-                error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
-                if (complete) {complete(error, nil);}return;
-            }
-
-            // 根据广告列表的nType用不同的SDK拉取广告
-            for (YDTAdModel *adModel in adArray) {
-                [self loadTripartiteAdModelWithAdModel:adModel adkey:adKey];
-            }
-            dispatch_group_notify(self.group, dispatch_get_main_queue(), ^{
-                NSArray *filteredAdArray = [self filterNotLoadedAdModel:adArray];
-                if (complete) {complete(error, filteredAdArray);}
-            });
-            NSLog(@"%@",dict);
-        }
-    }];
-    [dataTask resume];
+    NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:self.baseParma];
+    [param setObject:adKey forKey:@"key"];
+    [param setObject:self.userID forKey:@"uid"];
+    YDTAdNetWorkManager *manager = [YDTAdNetWorkManager sharedManager];
+    [manager addCookie];
+    [manager POST:self.adServerIP
+       parameters:param
+          success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+              
+              NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+              
+              if ([dict isKindOfClass:[NSDictionary class]]) {
+                  NSError *error = nil;
+                  if (error) {
+                      error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
+                      if (complete) {complete(error, nil);}return;
+                  }
+                  
+                  NSArray *dataArray = dict[@"data"];
+                  if (!dataArray || ![dataArray isKindOfClass:[NSArray class]] || dataArray.count <= 0) {
+                      error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
+                      if (complete) {complete(error, nil);}return;
+                  }
+                  
+                  NSArray *adArray = @[[[YDTAdModel alloc] initWithDictionary:dataArray[0]]];
+                  if (error) {
+                      error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
+                      if (complete) {complete(error, nil);}return;
+                  }
+                  
+                  // 根据广告列表的nType用不同的SDK拉取广告
+                  for (YDTAdModel *adModel in adArray) {
+                      [self loadTripartiteAdModelWithAdModel:adModel adkey:adKey];
+                  }
+                  dispatch_group_notify(self.group, dispatch_get_main_queue(), ^{
+                      NSArray *filteredAdArray = [self filterNotLoadedAdModel:adArray];
+                      if (complete) {complete(error, filteredAdArray);}
+                  });
+                  NSLog(@"%@",dict);
+              }else{
+                  if (complete) {complete(nil, nil);}return;
+              }
+              NSLog(@"\n***************************************\nURL:%@\n---------------------------------------\nresponseObject:%@",task.response.URL,[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+          }
+          failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
+              if (complete) {complete(error, nil);}return;
+          }];
 }
 
 ///通过三方key直接拉去三方广告
