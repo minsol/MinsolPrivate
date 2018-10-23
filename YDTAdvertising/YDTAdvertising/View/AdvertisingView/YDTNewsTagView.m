@@ -76,14 +76,14 @@
 
 -(void)setTagType:(YDTNewsTagType)tagType{
     switch (tagType) {
-        caseYDTNewsTagTypeTopic:
+        case YDTNewsTagTypeTopic:
             self.hidden = false;
             self.tagTitleLabel.text = @"话题";
             self.tagTitleLabel.textColor = HEX_COLOR(0x438ADD);
             self.leftView.backgroundColor = HEX_COLOR(0x438ADD);
             self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x438ADD,0.2);
             break;
-        caseYDTNewsTagTypeHotPost:
+        case YDTNewsTagTypeHotPost:
             self.hidden = false;
             self.tagTitleLabel.text = @"热门";
             self.tagTitleLabel.textColor = HEX_COLOR(0xFF7A45);
@@ -91,7 +91,7 @@
             self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFF7A45,0.2);
 
             break;
-        caseYDTNewsTagTypeActivity:
+        case YDTNewsTagTypeActivity:
             self.hidden = false;
             self.tagTitleLabel.text = @"活动";
             self.tagTitleLabel.textColor = HEX_COLOR(0xFFAD00);
@@ -99,21 +99,21 @@
             self.contentView.backgroundColor = HEX_COLOR_ALPHA(0xFFAD00,0.2);
 
             break;
-        caseYDTNewsTagTypeDiscuss:
+        case YDTNewsTagTypeDiscuss:
             self.hidden = false;
             self.tagTitleLabel.text = @"讨论";
             self.tagTitleLabel.textColor = HEX_COLOR(0x71C527);
             self.leftView.backgroundColor = HEX_COLOR(0x71C527);
             self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x71C527,0.2);
             break;
-        caseYDTNewsTagTypeAdvertising:
+        case YDTNewsTagTypeAdvertising:
             self.hidden = false;
             self.tagTitleLabel.text = @"广告";
             self.tagTitleLabel.textColor = HEX_COLOR(0x888888);
             self.leftView.backgroundColor = HEX_COLOR(0x888888);
             self.contentView.backgroundColor = HEX_COLOR_ALPHA(0x888888,0.2);
             break;
-        caseYDTNewsTagTypeCustom:
+        case YDTNewsTagTypeCustom:
             self.hidden = false;
             self.tagTitleLabel.text = @"";
             self.tagTitleLabel.textColor = HEX_COLOR(0xFA541C);
