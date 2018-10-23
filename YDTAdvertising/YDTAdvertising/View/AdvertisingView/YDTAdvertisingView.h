@@ -9,26 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YDTNewsTagView.h"
 #import "YDTAdModel.h"
-/*
- ///使用位置说明
- 左图右文:
- 首页信息流
- 
- 大图样式带标题:
- 首页信息流
- 
- 左图右文带按钮:
- 竞彩文章底部的“一键购cai”
- 
- 大图样式无标题:
- 新闻底部banner
- */
-typedef NS_ENUM(NSInteger, A8AdvertisingViewType) {
-    A8AdvertisingViewTypeLeftImage, /**< 左图右文 */
-    A8AdvertisingViewTypeLargeImageWithTitle,/**< 大图样式带标题 */
-    A8AdvertisingViewTypeLeftImageRightButton,/**< 左图右文带按钮 */
-    A8AdvertisingViewTypeLargeImage,/**< 大图样式无标题 */
-};
+
 
 @interface YDTAdvertisingView : UIView
 

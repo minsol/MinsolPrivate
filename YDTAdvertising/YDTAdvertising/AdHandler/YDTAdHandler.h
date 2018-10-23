@@ -30,6 +30,12 @@ typedef void(^Complete)(NSError *error, NSArray<YDTAdModel *> *adModelArray);
 - (void)getAdDataWithADKey:(NSString *)adKey complete:(Complete)complete;
 ///通过三方key直接拉去三方广告
 - (void)getAdDataWithADModel:(YDTAdModel *)adModel adkey:(NSString*)adKey complete:(void(^)(void))complete;
+/**
+ 广告展示上报处理
+ @param adModel 广告数据模型
+ @param superView superView
+ */
+- (void)adShowReportWithAdModel:(YDTAdModel *)adModel superView:(UIView *)superView;
 ///广告点击
 - (void)adClickedWithAdModel:(YDTAdModel *)adModel;
 ///通过广告获取对应的cell

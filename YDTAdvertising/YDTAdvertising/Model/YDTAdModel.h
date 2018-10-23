@@ -11,6 +11,26 @@
 #import "GDTNativeAd.h"
 #import "YDTCorpizeAdModel.h"
 #import "YDTVoiceAdModel.h"
+/*
+ ///使用位置说明
+ 左图右文:
+ 首页信息流
+ 
+ 大图样式带标题:
+ 首页信息流
+ 
+ 左图右文带按钮:
+ 竞彩文章底部的“一键购cai”
+ 
+ 大图样式无标题:
+ 新闻底部banner
+ */
+typedef NS_ENUM(NSInteger, A8AdvertisingViewType) {
+    A8AdvertisingViewTypeLeftImage, /**< 左图右文 */
+    A8AdvertisingViewTypeLargeImageWithTitle,/**< 大图样式带标题 */
+    A8AdvertisingViewTypeLeftImageRightButton,/**< 左图右文带按钮 */
+    A8AdvertisingViewTypeLargeImage,/**< 大图样式无标题 */
+};
 
 @class IMNative;
 @class GDTNativeAdData;
@@ -34,7 +54,7 @@
 @property (nonatomic, copy) NSString *sExtra; /**< 三方额外的信息 */
 @property (nonatomic, copy) NSDictionary *sExtraDic; /**< 三方额外的信息 */
 
-//@property (nonatomic, assign) A8AdvertisingViewType showType; /**< 广告显示样式 */
+@property (nonatomic, assign) A8AdvertisingViewType showType; /**< 广告显示样式 */
 
 @property (nonatomic, copy) NSString *isLoveShowAD; /**< 是否是小爱广告 1-是 0-不是 */
 @property (nonatomic, copy) NSString *jumpType; /**< 跳转类型 0-下载应用 1-跳转随机房间 2-跳转tab */
