@@ -42,7 +42,7 @@
     // 广告标题
     [self.advertisingTitle mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self.contentView).mas_offset(12);
-        make.right.equalTo(self.contentView).mas_offset(12);
+        make.right.equalTo(self.contentView).mas_offset(-12);
     }];
     
     // 广告图片
