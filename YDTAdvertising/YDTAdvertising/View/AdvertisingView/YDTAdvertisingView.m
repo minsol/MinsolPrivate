@@ -108,7 +108,7 @@
     if (!_advertisingTitle) {
         _advertisingTitle = [[UILabel alloc] init];
         _advertisingTitle.font = [UIFont systemFontOfSize:16];
-//        _advertisingTitle.textColor = [UIColor a8_textBlackColor];
+        _advertisingTitle.textColor = [UIColor colorWithWhite:32.0f / 255.0f alpha:1.0f];
         _advertisingTitle.numberOfLines = 2;
     }
     return _advertisingTitle;
@@ -118,7 +118,7 @@
     if (!_advertisingSubTitel) {
         _advertisingSubTitel = [[UILabel alloc] init];
         _advertisingSubTitel.font = [UIFont systemFontOfSize:12.0f];
-//        _advertisingSubTitel.textColor = [UIColor a8_textGreyColor];
+        _advertisingSubTitel.textColor = [UIColor colorWithWhite:136.0f / 255.0f alpha:1.0f];
     }
     return _advertisingSubTitel;
 }
@@ -134,7 +134,7 @@
 -(UIView *)bottomLineView{
     if (!_bottomLineView) {
         _bottomLineView = [[UIView alloc] init];
-//        _bottomLineView.backgroundColor = [UIColor a8_backgroundGreyColor];
+        _bottomLineView.backgroundColor = [UIColor colorWithWhite:242.0f / 255.0f alpha:1.0f];
     }
     return _bottomLineView;
 }
