@@ -48,6 +48,7 @@
         self.group = dispatch_group_create();
         self.baseParma = [NSDictionary dictionary];
         self.userID = @"";
+        self.adServerIP = @"";
     }
     return self;
 }
@@ -81,7 +82,7 @@
     [param setObject:self.userID forKey:@"uid"];
     YDTAdNetWorkManager *manager = [YDTAdNetWorkManager sharedManager];
     [manager addCookie];
-    [manager POST:self.adServerIP
+    [manager GET:self.adServerIP
        parameters:param
           success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
               
