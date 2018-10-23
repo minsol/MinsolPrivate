@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name          = 'YDTAdvertising'
-    s.version       = '2.0.3'
+    s.version       = '2.0.4'
     s.summary       = 'YDTAdvertising广告私有库.'
     s.homepage      = "https://github.com/minsol/TestLib"
     s.license       = { :type => 'MIT', :file => 'LICENSE'  }
@@ -20,18 +20,18 @@ Pod::Spec.new do |s|
 
     #配置层级目录
     s.subspec 'AdHandler' do |ss|
-        ss.source_files = 'YDTAdvertising/Advertising/AdHandler/**/*.{h,m}'
+        ss.source_files = 'Advertising/AdHandler/**/*.{h,m}'
     end
 
     s.subspec 'Model' do |ss|
-        ss.source_files = 'YDTAdvertising/Advertising/Model/*.{h,m}'
+        ss.source_files = 'Advertising/Model/*.{h,m}'
     end
 
     s.subspec 'View' do |ss|
-        ss.source_files = 'YDTAdvertising/Advertising/View/**/*.{h,m}'
+        ss.source_files = 'Advertising/View/**/*.{h,m}'
     end
 
     s.subspec 'GDT_iOS_SDK_4.8.0' do |ss|
-        ss.source_files = 'YDTAdvertising/Advertising/GDT_iOS_SDK_4.8.0/*.{h,m}'
+        ss.source_files = 'Advertising/GDT_iOS_SDK_4.8.0/*.{h,m}'
     end
 end
