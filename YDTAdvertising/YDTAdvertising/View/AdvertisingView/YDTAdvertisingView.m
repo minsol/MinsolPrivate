@@ -56,8 +56,8 @@
         [self.contentView addSubview:self.advertisingTitle];
         [self.contentView addSubview:self.advertisingSubTitel];
         [self.contentView addSubview:self.advertisingTagView];
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(advertisingtapGesture)];
-        [self addGestureRecognizer:tapGesture];
+//        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(advertisingtapGesture)];
+//        [self addGestureRecognizer:tapGesture];
     }
     return self;
 }
