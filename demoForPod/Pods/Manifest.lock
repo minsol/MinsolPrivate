@@ -1,0 +1,35 @@
+PODS:
+  - A8HttpMessage (0.0.1):
+    - AFNetworking
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+
+DEPENDENCIES:
+  - A8HttpMessage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+  https://github.com/minsol/MinsolSpec.git:
+    - A8HttpMessage
+
+SPEC CHECKSUMS:
+  A8HttpMessage: 22cda98ffb4346b2d0fb00ef6e9e48b1b5de495c
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+
+PODFILE CHECKSUM: ed6cb631585a59335ea66a2f49e43df514758e30
+
+COCOAPODS: 1.5.3

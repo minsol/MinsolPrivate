@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'  # 官方库
+source 'https://github.com/minsol/MinsolSpec.git'   # 私有库
+
+target 'demo' do
+
+  # Pods for demo
+#    pod 'TestLib'
+#    pod 'YDTAppPrivate'
+    pod 'InMobiSDK', '~> 7.0.1'
+    pod 'Masonry', '~> 1.1.0'
+    pod 'OpenUDID', '~> 1.0.0'
+#    pod 'GDT_iOS_SDK', :path => "/Users/minsol/Desktop/GDT_iOS_SDK"
+    pod 'AFNetworking', '~> 3.1.0' # 被Qiniu依赖
+
+end
+
