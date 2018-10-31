@@ -63,6 +63,9 @@
 		C6E135E92179D93D0061FD87 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E135E82179D93C0061FD87 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C6E135EB2179D94D0061FD87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E135EA2179D94D0061FD87 /* AVFoundation.framework */; };
 		C6E135ED2179D9560061FD87 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E135EC2179D9560061FD87 /* libxml2.tbd */; };
+		C6FB044C2189875700961C2B /* YDTAdvertising.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6FB044B2189875700961C2B /* YDTAdvertising.podspec */; };
+		C6FB044E2189875B00961C2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6FB044D2189875B00961C2B /* README.md */; };
+		C6FB04502189875E00961C2B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6FB044F2189875E00961C2B /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +169,9 @@
 		C6E135E82179D93C0061FD87 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C6E135EA2179D94D0061FD87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C6E135EC2179D9560061FD87 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		C6FB044B2189875700961C2B /* YDTAdvertising.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YDTAdvertising.podspec; sourceTree = "<group>"; };
+		C6FB044D2189875B00961C2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6FB044F2189875E00961C2B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D45048793CFF07D8D70B96EE /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +340,9 @@
 		C630E3232182A61900522A0C /* YDTAdvertising */ = {
 			isa = PBXGroup;
 			children = (
+				C6FB044F2189875E00961C2B /* LICENSE */,
+				C6FB044D2189875B00961C2B /* README.md */,
+				C6FB044B2189875700961C2B /* YDTAdvertising.podspec */,
 				C630E3922182A68600522A0C /* GDT_iOS_SDK_4.8.0 */,
 				C630E3242182A61900522A0C /* YDTAdvertising */,
 			);
@@ -551,13 +560,16 @@
 				C630E3762182A61900522A0C /* TestLib.podspec in Resources */,
 				C630E38F2182A61900522A0C /* YDTAppPrivate.podspec in Resources */,
 				76E4859B2178288F007C9E76 /* Assets.xcassets in Resources */,
+				C6FB044E2189875B00961C2B /* README.md in Resources */,
 				C630E3712182A61900522A0C /* README.md in Resources */,
 				C630E3902182A61900522A0C /* LICENSE in Resources */,
 				C630E3732182A61900522A0C /* LICENSE in Resources */,
 				C630E3702182A61900522A0C /* LICENSE in Resources */,
 				76E485992178288E007C9E76 /* Main.storyboard in Resources */,
+				C6FB04502189875E00961C2B /* LICENSE in Resources */,
 				C630E3752182A61900522A0C /* README.md in Resources */,
 				C630E3722182A61900522A0C /* A8HttpMessage.podspec in Resources */,
+				C6FB044C2189875700961C2B /* YDTAdvertising.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
