@@ -111,8 +111,10 @@
                       error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
                       if (complete) {complete(error, nil);}return;
                   }
-                  
-                  NSArray *adArray = @[[[YDTAdModel alloc] initWithDictionary:dataArray[0]]];
+                  NSMutableArray *adArray = [NSMutableArray array];
+                  for (NSDictionary *adDic in dataArray) {
+                      [adArray addObject:[[YDTAdModel alloc] initWithDictionary:adDic]];
+                  }
                   if (error) {
                       error = [NSError errorWithDomain:@"数据请求错误" code:0 userInfo:nil];
                       if (complete) {complete(error, nil);}return;
