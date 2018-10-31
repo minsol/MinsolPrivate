@@ -28,7 +28,7 @@
 }
 
 -(void)loadTripartiteModelWithAdModel:(YDTAdModel*)adModel adkey:(NSString*)adKey complete:(void(^)(void))complete{
-
+    
     // 惠头条
     // extAdType：横幅-201 开屏-202 弹窗-203 原生信息流-207 原生三小图-208
     // extAdId: 广告ID
@@ -139,26 +139,33 @@
     if (adModel.corpizeModel) {
         if (adModel.corpizeModel.nativeModel) {
             YDTCorpizeNativeLinkModel *linkModel = adModel.corpizeModel.nativeModel.linkModel;
-            [self corpizedModelClickedWithUrl:linkModel.url action:linkModel.action];
+            for (NSString *reportString in linkModel.clicktrackers) {
+                NSRange xRange = [reportString rangeOfString:@"[CLICK_X]"];
+                if (xRange.length > 0) {
+                    NSString *reportStr = [reportString stringByReplacingCharactersInRange:xRange withString:@"0"];
+                    NSRange yRange = [reportStr rangeOfString:@"[CLICK_Y]"];
+                    if (yRange.length > 0) {
+                        NSString *endReportStr = [reportStr stringByReplacingCharactersInRange:yRange withString:@"0"];
+                        [self reportAdWithUrl:endReportStr httpMethodType:ADHttpMethodTypePost];
+                    }
+                }
+            }
         } else if (adModel.corpizeModel.extModel) {
-            [self corpizedModelClickedWithUrl:adModel.corpizeModel.extModel.clickurl action:adModel.corpizeModel.extModel.action];
+            for (NSString *reportString in adModel.corpizeModel.extModel.clicktrackers) {
+                NSRange xRange = [reportString rangeOfString:@"[CLICK_X]"];
+                if (xRange.length > 0) {
+                    NSString *reportStr = [reportString stringByReplacingCharactersInRange:xRange withString:@"0"];
+                    NSRange yRange = [reportStr rangeOfString:@"[CLICK_Y]"];
+                    if (yRange.length > 0) {
+                        NSString *endReportStr = [reportStr stringByReplacingCharactersInRange:yRange withString:@"0"];
+                        [self reportAdWithUrl:endReportStr httpMethodType:ADHttpMethodTypePost];
+                    }
+                }
+            }
         }
     }
-    [self clickAdReportAdWithAdModel:adModel];
-}
-/**
- 惠头条广告点击事件
- 
- @param url 跳转地址
- @param action 曹邹
- */
-- (void)corpizedModelClickedWithUrl:(NSString *)url action:(NSString *)action {
-    
 }
 
-- (void)clickAdReportAdWithAdModel:(YDTAdModel*)adModel{
-    
-}
 
 
 - (NSDictionary *)addBaseParameWithParameter:(NSDictionary *)para {
@@ -204,3 +211,4 @@
 }
 
 @end
+
