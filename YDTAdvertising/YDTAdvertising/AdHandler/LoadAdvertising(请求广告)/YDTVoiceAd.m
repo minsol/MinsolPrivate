@@ -135,7 +135,7 @@
     [dict setValue:[NSString stringWithFormat:@"%lf",[UIScreen mainScreen].scale] forKey:@"density"]; //屏幕密度
     [dict setValue:@"46000" forKey:@"operator"]; //网络运营商
     [dict setValue:@"6" forKey:@"net"]; //   联网类型
-    NSString *ipAddress = [NSString stringWithFormat:@"%@",YDTADHANDLER.userHost];
+    NSString *ipAddress = [NSString stringWithFormat:@"%@",self.userHost];
     [dict setValue:ipAddress forKey:@"ip"]; // IP地址
     
     NSMutableString *userAgent = [NSMutableString stringWithString:[[UIWebView new] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"]];

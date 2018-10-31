@@ -18,14 +18,6 @@ typedef void(^Complete)(NSError *error, NSArray<YDTAdModel *> *adModelArray);
 @interface YDTAdHandler : NSObject
 
 + (instancetype)sharedInstance;
-@property (nonatomic, strong) NSString *adServerIP; /**< 广告域名 */
-@property (nonatomic, strong) NSString *userID; /**< userID */
-@property (nonatomic, strong) NSDictionary *baseParma; /**< baseParma */
-
-@property (nonatomic, strong) NSString *gdtAppId; /**< 广点通ID */
-@property (nonatomic, strong) NSString *inmobiPlacementID; /**< Inmobi */
-@property (nonatomic, strong) NSString *userHost; /**< 用户域名 */
-@property (nonatomic, strong) NSString *luomiKey; /**< luomiKey */
 @property (nonatomic,   weak) id <AdvertisingDelegate> delegate;
 
 

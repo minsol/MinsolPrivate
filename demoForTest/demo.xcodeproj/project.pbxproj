@@ -423,12 +423,12 @@
 		C630E3492182A61900522A0C /* AdHandler */ = {
 			isa = PBXGroup;
 			children = (
+				C630E35B2182A61900522A0C /* AdvertisingDelegate.h */,
 				C630E34A2182A61900522A0C /* LoadAdvertising(请求广告) */,
-				C630E3572182A61900522A0C /* YDTAdNetWorkManager.m */,
 				C630E3582182A61900522A0C /* YDTAdHandler.h */,
 				C630E3592182A61900522A0C /* YDTAdHandler.m */,
 				C630E35A2182A61900522A0C /* YDTAdNetWorkManager.h */,
-				C630E35B2182A61900522A0C /* AdvertisingDelegate.h */,
+				C630E3572182A61900522A0C /* YDTAdNetWorkManager.m */,
 			);
 			path = AdHandler;
 			sourceTree = "<group>";
@@ -437,17 +437,17 @@
 			isa = PBXGroup;
 			children = (
 				C630E34B2182A61900522A0C /* YDTADBaseObject.h */,
-				C630E34C2182A61900522A0C /* YDTGDTAd.h */,
-				C630E34D2182A61900522A0C /* YDTInmobiAd.h */,
-				C630E34E2182A61900522A0C /* YDTLuomiAd.m */,
-				C630E34F2182A61900522A0C /* YDTCorpizeAd.h */,
-				C630E3502182A61900522A0C /* YDTVoiceAd.h */,
 				C630E3512182A61900522A0C /* YDTADBaseObject.m */,
-				C630E3522182A61900522A0C /* YDTGDTAd.m */,
-				C630E3532182A61900522A0C /* YDTInmobiAd.m */,
-				C630E3542182A61900522A0C /* YDTVoiceAd.m */,
+				C630E34F2182A61900522A0C /* YDTCorpizeAd.h */,
 				C630E3552182A61900522A0C /* YDTCorpizeAd.m */,
+				C630E34C2182A61900522A0C /* YDTGDTAd.h */,
+				C630E3522182A61900522A0C /* YDTGDTAd.m */,
+				C630E34D2182A61900522A0C /* YDTInmobiAd.h */,
+				C630E3532182A61900522A0C /* YDTInmobiAd.m */,
 				C630E3562182A61900522A0C /* YDTLuomiAd.h */,
+				C630E34E2182A61900522A0C /* YDTLuomiAd.m */,
+				C630E3502182A61900522A0C /* YDTVoiceAd.h */,
+				C630E3542182A61900522A0C /* YDTVoiceAd.m */,
 			);
 			path = "LoadAdvertising(请求广告)";
 			sourceTree = "<group>";

@@ -24,6 +24,8 @@
 @property (nonatomic, strong) YDTCorpizeAd *corpizedAd; /**< 惠头条广告对象 */
 @property (nonatomic, strong) YDTVoiceAd *voiceAd; /**< 讯飞广告对象 */
 
+@property (nonatomic, strong) NSString *adServerIP; /**< 广告域名 */
+@property (nonatomic, strong) NSDictionary *baseParma; /**< baseParma */
 @end
 
 @implementation YDTAdHandler
@@ -47,25 +49,27 @@
         self.voiceAd = [YDTVoiceAd sharedInstance];
         self.group = dispatch_group_create();
         self.baseParma = [NSDictionary dictionary];
-        self.userID = @"";
         self.adServerIP = @"";
     }
     return self;
 }
 
--(void)setGdtAppId:(NSString *)gdtAppId{
-    self.gdtAd.gdtAppId = gdtAppId;
+-(void)setDelegate:(id<AdvertisingDelegate>)delegate{
+    _delegate = delegate;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getUserHost)]){
+        self.voiceAd.userHost = [self.delegate getUserHost];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getGdtAppId)]){
+        self.gdtAd.gdtAppId = [self.delegate getGdtAppId];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getInmobiPlacementID)]){
+        self.inmobiAd.placementID = [self.delegate getInmobiPlacementID];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getLuomiKey)]){
+        self.luomiAd.luomiKey = [self.delegate getLuomiKey];
+    }
 }
 
--(void)setInmobiPlacementID:(NSString *)inmobiPlacementID{
-    self.inmobiAd.placementID = inmobiPlacementID;
-}
--(void)setUserHost:(NSString *)userHost{
-    self.voiceAd.userHost = userHost;
-}
--(void)setLuomiKey:(NSString *)luomiKey{
-    self.luomiAd.luomiKey = luomiKey;
-}
 - (void)dealloc {
     NSLog(@"%s", __func__);
 }
@@ -77,9 +81,16 @@
  @param complete 完成回调
  */
 - (void)getAdDataWithADKey:(NSString *)adKey complete:(Complete)complete {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getAdServerIP)]){
+        self.adServerIP = [self.delegate getAdServerIP];
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getBaseParma)]){
+        self.baseParma = [self.delegate getBaseParma];
+    }
+    
     NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:self.baseParma];
     [param setObject:adKey forKey:@"key"];
-    [param setObject:self.userID forKey:@"uid"];
     YDTAdNetWorkManager *manager = [YDTAdNetWorkManager sharedManager];
     [manager addCookie];
     [manager GET:self.adServerIP
