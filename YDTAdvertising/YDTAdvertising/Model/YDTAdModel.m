@@ -16,7 +16,12 @@
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key {
-   
+    if ([key isEqualToString:@"sExtra"]) {
+        NSString *sExtra = value ? value : @"";
+        NSData *jsonData = [sExtra dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *sExtraDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+        [super setValue:sExtraDic forKey:@"sExtraDic"];
+    }
     [super setValue:value forKey:key];
 }
 
