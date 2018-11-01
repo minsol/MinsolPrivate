@@ -1,8 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'  # 官方库
 source 'https://github.com/minsol/MinsolSpec.git'   # 私有库
 
+# 这用于开发库的时候本地使用
 target 'demo' do
-
   # Pods for demo
 #    pod 'TestLib'
 #    pod 'YDTAppPrivate'
@@ -14,3 +14,12 @@ target 'demo' do
 
 end
 
+#这个用于测试本地库和远程库
+target 'DemoForTestPod' do
+    # Pods for demo
+    #    pod 'TestLib'
+    #    pod 'YDTAppPrivate'
+    #    pod 'YDTAdvertising', :path => "/Users/minsol/Desktop/MinsolPrivate/YDTAdvertising"
+#        pod 'YDTAdvertising'
+#        pod 'A8HttpMessage'
+end

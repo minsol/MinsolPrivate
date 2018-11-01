@@ -25,6 +25,13 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Pods-DemoForTestPod.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Pods-demo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
