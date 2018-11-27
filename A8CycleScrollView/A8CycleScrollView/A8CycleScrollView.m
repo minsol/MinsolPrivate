@@ -77,24 +77,6 @@ NSString * const ID = @"A8CycleScrollCell";
 
 
 #pragma mark - properties
--(void)setDelegate:(id<A8CycleScrollViewDelegate>)delegate{
-    _delegate = delegate;
-    
-    if ([self.delegate respondsToSelector:@selector(customCollectionViewCellClassForCycleScrollView:)] && [self.delegate customCollectionViewCellClassForCycleScrollView:self]) {
-        [self.mainView registerClass:[self.delegate customCollectionViewCellClassForCycleScrollView:self] forCellWithReuseIdentifier:ID];
-    }
-    
-    if ([self.delegate respondsToSelector:@selector(customCollectionViewFlowLayoutForCycleScrollView:)]) {
-        UICollectionViewLayout *flowLayout = [self.delegate customCollectionViewFlowLayoutForCycleScrollView:self];
-        if ([flowLayout respondsToSelector:@selector(getPageWidth)]) {
-            NSNumber *pageWidth = [flowLayout performSelector:@selector(getPageWidth)];
-            self.pageWidth = pageWidth.floatValue;
-            self.mainView.pagingEnabled = false;
-        }
-        [self.mainView setCollectionViewLayout:flowLayout];
-    }
-}
-
 - (void)setPlaceholderImage:(UIImage *)placeholderImage{
     _placeholderImage = placeholderImage;
     if (!self.backgroundImageView) {
@@ -151,6 +133,7 @@ NSString * const ID = @"A8CycleScrollCell";
 }
 
 - (void)setImageURLStringsGroup:(NSArray *)imageURLStringsGroup{
+    [self congifDelegateSetting];
     _imageURLStringsGroup = imageURLStringsGroup;
     NSMutableArray *temp = [NSMutableArray new];
     [_imageURLStringsGroup enumerateObjectsUsingBlock:^(NSString * obj, NSUInteger idx, BOOL * stop) {
@@ -166,6 +149,28 @@ NSString * const ID = @"A8CycleScrollCell";
         }
     }];
     self.imagePathsGroup = [temp copy];
+}
+
+
+/**
+ 使用懒加载的时候遇到，实例还没有创建的时候调用代理方法导致死循环。
+ */
+-(void)congifDelegateSetting{
+    if ([self.delegate respondsToSelector:@selector(customCollectionViewCellClassForCycleScrollView:)] && [self.delegate customCollectionViewCellClassForCycleScrollView:self]) {
+        [self.mainView registerClass:[self.delegate customCollectionViewCellClassForCycleScrollView:self] forCellWithReuseIdentifier:ID];
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(customCollectionViewFlowLayoutForCycleScrollView:)]) {
+        UICollectionViewLayout *flowLayout = [self.delegate customCollectionViewFlowLayoutForCycleScrollView:self];
+        if (flowLayout != nil) {
+            if ([flowLayout respondsToSelector:@selector(getPageWidth)]) {
+                NSNumber *pageWidth = [flowLayout performSelector:@selector(getPageWidth)];
+                self.pageWidth = pageWidth.floatValue;
+                self.mainView.pagingEnabled = false;
+            }
+            [self.mainView setCollectionViewLayout:flowLayout];
+        }
+    }
 }
 
 #pragma mark - actions

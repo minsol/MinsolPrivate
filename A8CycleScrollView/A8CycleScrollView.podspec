@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name          = 'A8CycleScrollView'
-    s.version       = '0.0.1'
+    s.version       = '0.0.2'
     s.summary       = 'A8CycleScrollView滚动视图.'
     s.homepage      = "https://github.com/minsol/MinsolSpec.git"
     s.license       = { :type => 'MIT', :file => 'LICENSE'  }
