@@ -22,4 +22,6 @@ target 'DemoForTestPod' do
     #    pod 'YDTAdvertising', :path => "/Users/minsol/Desktop/MinsolPrivate/YDTAdvertising"
 #        pod 'YDTAdvertising'
 #        pod 'A8HttpMessage'
+#        pod 'A8CycleScrollView'
+
 end
