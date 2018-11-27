@@ -36,4 +36,5 @@
     return bannerLayout;
     }
 ```
+![自定义layout](https://github.com/minsol/MarkdownPhotos/blob/master/Images/A8CycleView/A8CycleViewlayout.png)
 
