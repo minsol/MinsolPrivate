@@ -15,7 +15,6 @@
 		76E485A12178288F007C9E76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E485A02178288F007C9E76 /* main.m */; };
 		B73E05F89DD7F3CAC176EE1D /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFE3F937306F3060D4DFB8C /* libPods-demo.a */; };
 		C62D867721ACEA3600BFA3CB /* A8CycleScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C62D866D21ACEA3600BFA3CB /* A8CycleScrollView.podspec */; };
-		C62D867821ACEA3600BFA3CB /* A8CycleScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C62D866F21ACEA3600BFA3CB /* A8CycleScrollCell.m */; };
 		C62D867921ACEA3600BFA3CB /* A8CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C62D867021ACEA3600BFA3CB /* A8CycleScrollView.m */; };
 		C62D867A21ACEA3600BFA3CB /* A8CycleScrollLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C62D867121ACEA3600BFA3CB /* A8CycleScrollLayout.m */; };
 		C62D867B21ACEA3600BFA3CB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C62D867521ACEA3600BFA3CB /* LICENSE */; };
@@ -98,10 +97,8 @@
 		8DCC324F226740AFA63CD532 /* Pods-DemoForTestPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoForTestPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoForTestPod/Pods-DemoForTestPod.release.xcconfig"; sourceTree = "<group>"; };
 		B6325230051206ADBD628C08 /* libPods-DemoForTestPod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoForTestPod.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D866D21ACEA3600BFA3CB /* A8CycleScrollView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = A8CycleScrollView.podspec; sourceTree = "<group>"; };
-		C62D866F21ACEA3600BFA3CB /* A8CycleScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A8CycleScrollCell.m; sourceTree = "<group>"; };
 		C62D867021ACEA3600BFA3CB /* A8CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A8CycleScrollView.m; sourceTree = "<group>"; };
 		C62D867121ACEA3600BFA3CB /* A8CycleScrollLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A8CycleScrollLayout.m; sourceTree = "<group>"; };
-		C62D867221ACEA3600BFA3CB /* A8CycleScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A8CycleScrollCell.h; sourceTree = "<group>"; };
 		C62D867321ACEA3600BFA3CB /* A8CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A8CycleScrollView.h; sourceTree = "<group>"; };
 		C62D867421ACEA3600BFA3CB /* A8CycleScrollLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A8CycleScrollLayout.h; sourceTree = "<group>"; };
 		C62D867521ACEA3600BFA3CB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -329,8 +326,6 @@
 		C62D866E21ACEA3600BFA3CB /* A8CycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				C62D867221ACEA3600BFA3CB /* A8CycleScrollCell.h */,
-				C62D866F21ACEA3600BFA3CB /* A8CycleScrollCell.m */,
 				C62D867421ACEA3600BFA3CB /* A8CycleScrollLayout.h */,
 				C62D867121ACEA3600BFA3CB /* A8CycleScrollLayout.m */,
 				C62D867321ACEA3600BFA3CB /* A8CycleScrollView.h */,
@@ -745,7 +740,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C630E3802182A61900522A0C /* YDTAdvertisingViewLeftImage.m in Sources */,
-				C62D867821ACEA3600BFA3CB /* A8CycleScrollCell.m in Sources */,
 				C630E37E2182A61900522A0C /* YDTAdvertisingCell.m in Sources */,
 				C62D867A21ACEA3600BFA3CB /* A8CycleScrollLayout.m in Sources */,
 				C630E3812182A61900522A0C /* YDTNewsTagView.m in Sources */,

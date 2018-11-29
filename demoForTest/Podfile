@@ -3,20 +3,17 @@ source 'https://github.com/minsol/MinsolSpec.git'   # 私有库
 
 # 这用于开发库的时候本地使用
 target 'demo' do
-  # Pods for demo
-#    pod 'TestLib'
-#    pod 'YDTAppPrivate'
+# Pods for demo
     pod 'InMobiSDK', '~> 7.0.1'
     pod 'Masonry', '~> 1.1.0'
     pod 'OpenUDID', '~> 1.0.0'
-#    pod 'GDT_iOS_SDK', :path => "/Users/minsol/Desktop/GDT_iOS_SDK"
-    pod 'AFNetworking', '~> 3.1.0' # 被Qiniu依赖
-
+    pod 'AFNetworking', '~> 3.1.0'
+    pod 'SDWebImage', '>= 4.0.0'
 end
 
 #这个用于测试本地库和远程库
 target 'DemoForTestPod' do
-    # Pods for demo
+    # Pods for DemoForTestPod
     #    pod 'TestLib'
     #    pod 'YDTAppPrivate'
     #    pod 'YDTAdvertising', :path => "/Users/minsol/Desktop/MinsolPrivate/YDTAdvertising"

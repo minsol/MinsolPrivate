@@ -7,21 +7,24 @@
 //
 
 #import "A8CycleScrollView.h"
-#import "A8CycleScrollCell.h"
 #import "UIImageView+WebCache.h"
 
 #define kMultiple 100
 NSString * const ID = @"A8CycleScrollCell";
 
 @interface A8CycleScrollView () <UICollectionViewDataSource, UICollectionViewDelegate>
-
 @property (nonatomic, weak) UICollectionView *mainView; // 显示图片的collectionView
 @property (nonatomic, strong) NSArray *imagePathsGroup;
 @property (nonatomic, weak) NSTimer *timer;
 @property (nonatomic, assign) NSInteger totalItemsCount;
 @property (nonatomic, strong) UIImageView *backgroundImageView; // 当imageURLs为空时的背景图
 @property (nonatomic, assign) CGFloat pageWidth; /**< CollectionView PageWidth */
+@end
 
+@interface A8CycleScrollCell : UICollectionViewCell
+@property (nonatomic, strong) UIImageView *imageView; /**< 图片 */
+@property (nonatomic, strong) UIImageView *newsTitleBackgroundImageView; /**< 标题背景图片 */
+@property (nonatomic, strong) UILabel *titleLabel; /**< 标题 */
 @end
 
 @implementation A8CycleScrollView
@@ -301,5 +304,52 @@ NSString * const ID = @"A8CycleScrollCell";
     }
 }
 
-
 @end
+
+#pragma mark - ########################A8CycleScrollCell########################
+@implementation A8CycleScrollCell
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setupUI];
+        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    }
+    return self;
+}
+
+
+- (void)setupUI {
+    self.layer.shadowOffset = CGSizeMake(0, 2);
+    self.layer.shadowOpacity = 0.4;
+    self.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.layer.cornerRadius = 4.0f;
+    // 1.图片
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    imageView.userInteractionEnabled = YES;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.layer.cornerRadius = 4;
+    imageView.clipsToBounds = YES;
+    [self.contentView addSubview:imageView];
+    self.imageView = imageView;
+    
+    // 2.标题背景视图
+    CGFloat height = 25;
+    CGFloat width = self.bounds.size.width;
+    CGFloat x = 0;
+    CGFloat y = self.bounds.size.height - height;
+    UIImageView *newsTitleBackgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    newsTitleBackgroundImageView.image = [UIImage imageNamed:@"a8_homeHot_banner_bottom"];
+    [imageView addSubview:newsTitleBackgroundImageView];
+    
+    // 3.新闻标题
+    CGFloat titleX = 4;
+    CGFloat titleY = 5;
+    CGFloat titleWidth = width - titleX * 2;
+    CGFloat titleHeight = height - titleY - 6;
+    UILabel *newsTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleX, titleY, titleWidth, titleHeight)];
+    newsTitleLabel.textColor = [UIColor whiteColor];
+    newsTitleLabel.font = [UIFont systemFontOfSize:14];
+    [newsTitleBackgroundImageView addSubview:newsTitleLabel];
+    self.titleLabel = newsTitleLabel;
+}
+@end
+
