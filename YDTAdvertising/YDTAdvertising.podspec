@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.author        = { "wanjian" => "wanjian@a8sport.com" }
     s.source        = { :git => "https://github.com/minsol/MinsolPrivate.git", :tag => "YDTAdvertising-#{s.version}" }
     s.ios.deployment_target = '8.0'
-    s.source_files = 'YDTAdvertising/**/*{h,m}'
+    s.source_files = 'YDTAdvertising/YDTAdvertising/**/*{h,m}'
 
     s.dependency "InMobiSDK"
     s.dependency "Masonry"
