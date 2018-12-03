@@ -56,7 +56,6 @@
 		C630E38F2182A61900522A0C /* YDTAppPrivate.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C630E3672182A61900522A0C /* YDTAppPrivate.podspec */; };
 		C630E3902182A61900522A0C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C630E3682182A61900522A0C /* LICENSE */; };
 		C630E3912182A61900522A0C /* YDTPrivateInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E36B2182A61900522A0C /* YDTPrivateInfoVC.m */; };
-		C630E39C2182A68600522A0C /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C630E39B2182A68600522A0C /* libGDTMobSDK.a */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
 		C6DB2A5A218A926A00F63CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A59218A926A00F63CFB /* ViewController.m */; };
 		C6DB2A5D218A926A00F63CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB2A5B218A926A00F63CFB /* Main.storyboard */; };
@@ -171,15 +170,6 @@
 		C630E3682182A61900522A0C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C630E36A2182A61900522A0C /* YDTPrivateInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTPrivateInfoVC.h; sourceTree = "<group>"; };
 		C630E36B2182A61900522A0C /* YDTPrivateInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTPrivateInfoVC.m; sourceTree = "<group>"; };
-		C630E3932182A68600522A0C /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
-		C630E3942182A68600522A0C /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
-		C630E3952182A68600522A0C /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
-		C630E3962182A68600522A0C /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
-		C630E3972182A68600522A0C /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
-		C630E3982182A68600522A0C /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
-		C630E3992182A68600522A0C /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
-		C630E39A2182A68600522A0C /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
-		C630E39B2182A68600522A0C /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		C6DB2A53218A926A00F63CFB /* DemoForTestPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForTestPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB2A55218A926A00F63CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6DB2A56218A926A00F63CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -222,7 +212,6 @@
 				C6E135DF2179D90B0061FD87 /* SystemConfiguration.framework in Frameworks */,
 				C6E135DD2179D9030061FD87 /* QuartzCore.framework in Frameworks */,
 				C6E135DB2179D8FA0061FD87 /* CoreLocation.framework in Frameworks */,
-				C630E39C2182A68600522A0C /* libGDTMobSDK.a in Frameworks */,
 				C6E135D92179D8F20061FD87 /* AdSupport.framework in Frameworks */,
 				B73E05F89DD7F3CAC176EE1D /* libPods-demo.a in Frameworks */,
 			);
@@ -412,7 +401,6 @@
 				C6FB044F2189875E00961C2B /* LICENSE */,
 				C6FB044D2189875B00961C2B /* README.md */,
 				C6FB044B2189875700961C2B /* YDTAdvertising.podspec */,
-				C630E3922182A68600522A0C /* GDT_iOS_SDK_4.8.0 */,
 				C630E3242182A61900522A0C /* YDTAdvertising */,
 			);
 			name = YDTAdvertising;
@@ -422,9 +410,9 @@
 		C630E3242182A61900522A0C /* YDTAdvertising */ = {
 			isa = PBXGroup;
 			children = (
+				C630E3482182A61900522A0C /* AdHeader.h */,
 				C630E3252182A61900522A0C /* Model */,
 				C630E3302182A61900522A0C /* View */,
-				C630E3482182A61900522A0C /* AdHeader.h */,
 				C630E3492182A61900522A0C /* AdHandler */,
 			);
 			path = YDTAdvertising;
@@ -549,23 +537,6 @@
 			);
 			path = Lib;
 			sourceTree = "<group>";
-		};
-		C630E3922182A68600522A0C /* GDT_iOS_SDK_4.8.0 */ = {
-			isa = PBXGroup;
-			children = (
-				C630E3932182A68600522A0C /* GDTNativeExpressAdView.h */,
-				C630E3942182A68600522A0C /* GDTMobBannerView.h */,
-				C630E3952182A68600522A0C /* GDTNativeAd.h */,
-				C630E3962182A68600522A0C /* GDTSDKConfig.h */,
-				C630E3972182A68600522A0C /* GDTMobInterstitial.h */,
-				C630E3982182A68600522A0C /* GDTSplashAd.h */,
-				C630E3992182A68600522A0C /* GDTNativeExpressAd.h */,
-				C630E39A2182A68600522A0C /* GDTSDKDefines.h */,
-				C630E39B2182A68600522A0C /* libGDTMobSDK.a */,
-			);
-			name = GDT_iOS_SDK_4.8.0;
-			path = demo/GDT_iOS_SDK_4.8.0;
-			sourceTree = SOURCE_ROOT;
 		};
 		C6DB2A54218A926A00F63CFB /* DemoForTestPod */ = {
 			isa = PBXGroup;
@@ -1000,6 +971,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKFQF9GW79;
 				INFOPLIST_FILE = DemoForTestPod/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1018,6 +990,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKFQF9GW79;
 				INFOPLIST_FILE = DemoForTestPod/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
