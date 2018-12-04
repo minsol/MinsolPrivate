@@ -24,6 +24,21 @@
     return sharedInstance;
 }
 
+/**
+ init
+ 子类需要重写
+ 并且需要创建相关的表实例
+ ///2.创建文章表的数据库
+ FMDatabase *database = [FMDatabase databaseWithPath:[self.databaseDictionaryPath stringByAppendingPathComponent:self.articleDatabaseFileName]];
+ database.logsErrors = YES;
+ if ([database open]) {
+ ///3.创建文章的表--并且持有本数据库
+ self.articleTable = [[ArticleTable alloc]initWithDataBase: database];
+ [self.articleTable createTable];
+ }
+ 
+ @return instancetype
+ */
 -(instancetype)init{
     self = [ super init];
     if (self) {

@@ -12,6 +12,10 @@
 @interface BaseTable : NSObject
 @property (nonatomic, strong) FMDatabase *database;/**< 数据库 */
 -(instancetype)initWithDataBase:(FMDatabase *)database;
+
+/**
+ 子类需要重写的两个方法
+ */
 -(void)createTable;
 -(void)deleteTable;
 @end
