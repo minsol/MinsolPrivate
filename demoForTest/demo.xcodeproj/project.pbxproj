@@ -53,7 +53,6 @@
 		C6B42BF421B656C100A19C2F /* SecurityAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BF321B656C100A19C2F /* SecurityAdaptor.m */; };
 		C6B42BFE21B657A000A19C2F /* NSData+DES.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BFD21B657A000A19C2F /* NSData+DES.m */; };
 		C6B42C0121B657AF00A19C2F /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BFF21B657AF00A19C2F /* NSData+AES.m */; };
-		C6B42C0521B65A4600A19C2F /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42C0421B65A4600A19C2F /* NSString+Hash.m */; };
 		C6B42C1521B6724A00A19C2F /* DatabaseAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42C0821B6724A00A19C2F /* DatabaseAdaptor.m */; };
 		C6B42C1621B6724A00A19C2F /* BaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42C0921B6724A00A19C2F /* BaseTable.m */; };
 		C6B42C1721B6724A00A19C2F /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42C0D21B6724A00A19C2F /* Article.m */; };
@@ -78,6 +77,7 @@
 		C6E135E92179D93D0061FD87 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E135E82179D93C0061FD87 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C6E135EB2179D94D0061FD87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E135EA2179D94D0061FD87 /* AVFoundation.framework */; };
 		C6E135ED2179D9560061FD87 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E135EC2179D9560061FD87 /* libxml2.tbd */; };
+		C6F4438221B67D0500498BBC /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F4438021B67D0500498BBC /* NSString+Hash.m */; };
 		C6FB044C2189875700961C2B /* YDTAdvertising.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6FB044B2189875700961C2B /* YDTAdvertising.podspec */; };
 		C6FB044E2189875B00961C2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6FB044D2189875B00961C2B /* README.md */; };
 		E0360642EB4736FA1E2AAD2F /* libPods-DemoForTestPod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6325230051206ADBD628C08 /* libPods-DemoForTestPod.a */; };
@@ -173,8 +173,6 @@
 		C6B42BFD21B657A000A19C2F /* NSData+DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DES.m"; sourceTree = "<group>"; };
 		C6B42BFF21B657AF00A19C2F /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
 		C6B42C0021B657AF00A19C2F /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
-		C6B42C0321B65A4600A19C2F /* NSString+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		C6B42C0421B65A4600A19C2F /* NSString+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		C6B42C0821B6724A00A19C2F /* DatabaseAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseAdaptor.m; sourceTree = "<group>"; };
 		C6B42C0921B6724A00A19C2F /* BaseTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTable.m; sourceTree = "<group>"; };
 		C6B42C0A21B6724A00A19C2F /* DatabaseAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseAdaptor.h; sourceTree = "<group>"; };
@@ -208,6 +206,8 @@
 		C6E135E82179D93C0061FD87 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C6E135EA2179D94D0061FD87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C6E135EC2179D9560061FD87 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		C6F4438021B67D0500498BBC /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		C6F4438121B67D0500498BBC /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		C6FB044B2189875700961C2B /* YDTAdvertising.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YDTAdvertising.podspec; sourceTree = "<group>"; };
 		C6FB044D2189875B00961C2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D45048793CFF07D8D70B96EE /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -526,7 +526,7 @@
 			children = (
 				C6B42BF221B656C100A19C2F /* SecurityAdaptor.h */,
 				C6B42BF321B656C100A19C2F /* SecurityAdaptor.m */,
-				C6B42C0221B65A1900A19C2F /* Hash */,
+				C6F4437F21B67D0500498BBC /* Hash */,
 				C6B42BFB21B6579400A19C2F /* DES */,
 				C6B42BFA21B6578D00A19C2F /* AES */,
 				C6B42BE621B655C100A19C2F /* RSA */,
@@ -559,15 +559,6 @@
 				C6B42BFD21B657A000A19C2F /* NSData+DES.m */,
 			);
 			path = DES;
-			sourceTree = "<group>";
-		};
-		C6B42C0221B65A1900A19C2F /* Hash */ = {
-			isa = PBXGroup;
-			children = (
-				C6B42C0321B65A4600A19C2F /* NSString+Hash.h */,
-				C6B42C0421B65A4600A19C2F /* NSString+Hash.m */,
-			);
-			path = Hash;
 			sourceTree = "<group>";
 		};
 		C6B42C0621B6724A00A19C2F /* A8FMDB */ = {
@@ -620,6 +611,15 @@
 				C6DB2A64218A926C00F63CFB /* main.m */,
 			);
 			path = DemoForTestPod;
+			sourceTree = "<group>";
+		};
+		C6F4437F21B67D0500498BBC /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4438021B67D0500498BBC /* NSString+Hash.m */,
+				C6F4438121B67D0500498BBC /* NSString+Hash.h */,
+			);
+			path = Hash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -781,6 +781,7 @@
 				C630E3812182A61900522A0C /* YDTNewsTagView.m in Sources */,
 				C6B42C1521B6724A00A19C2F /* DatabaseAdaptor.m in Sources */,
 				C630E36F2182A61900522A0C /* YDTNetworkTool.m in Sources */,
+				C6F4438221B67D0500498BBC /* NSString+Hash.m in Sources */,
 				C630E37B2182A61900522A0C /* YDTAdModel.m in Sources */,
 				C630E3792182A61900522A0C /* YDTCorpizeAdModel.m in Sources */,
 				C630E3852182A61900522A0C /* YDTAdvertisingViewLargeImageTitle.m in Sources */,
@@ -814,7 +815,6 @@
 				C6B42C1821B6724A00A19C2F /* ArticleTable.m in Sources */,
 				C630E36D2182A61900522A0C /* HttpMessageBase.m in Sources */,
 				C6B42BF121B6560100A19C2F /* RSATool.m in Sources */,
-				C6B42C0521B65A4600A19C2F /* NSString+Hash.m in Sources */,
 				C630E3782182A61900522A0C /* YDTAdBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

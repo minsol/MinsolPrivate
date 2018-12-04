@@ -8,7 +8,7 @@
 
 #import "RSATool.h"
 #import <Security/Security.h>
-#import <CommonCrypto/CommonCryptor.h>
+#import <CommonCrypto/CommonCrypto.h>
 
 @implementation RSATool
 
