@@ -23,4 +23,5 @@ target 'DemoForTestPod' do
 #        pod 'A8HttpMessage'
         pod 'A8CycleScrollView'
         pod 'A8FMDB'
+        pod 'SecurityAdaptor'
 end

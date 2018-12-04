@@ -9,6 +9,8 @@
 
 #import "ViewController.h"
 #import "DatabaseAdaptor.h"
+#import "SecurityAdaptor.h"
+
 @interface ViewController ()
 
 @end
@@ -17,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSLog(@"%@",[SecurityAdaptor encodeBase64String:@"minsol"]);
+    NSLog(@"%@",[SecurityAdaptor md5:@"minsold"]);
 }
 
 
