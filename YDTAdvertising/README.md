@@ -34,7 +34,7 @@
 
 ```
 
-4. 通过广告获得对应的视图\
+4. 通过广告获得对应的视图
 ```objc
     YDTAdvertisingView *adView = [YDTADHANDLER getYDTAdvertisingViewWithAdModel:self.admodel type:A8AdvertisingViewTypeLargeImageWithTitle];
     adView.frame =CGRectMake(100, 100, 200, 100);
