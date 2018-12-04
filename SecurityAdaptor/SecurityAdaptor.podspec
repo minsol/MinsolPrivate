@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
     s.author        = { "wanjian" => "wanjian@a8sport.com" }
     s.source        = { :git => "https://github.com/minsol/MinsolPrivate.git", :tag => "SecurityAdaptor-#{s.version}" }
     s.ios.deployment_target = '8.0'
-    s.source_files = 'SecurityAdaptor/**/*.{h,m}','SecurityAdaptor/*.{h,m}'
-    s.public_header_files = 'SecurityAdaptor/*.{h,m}'
+    s.source_files = 'SecurityAdaptor/SecurityAdaptor/**/*.{h,m}','SecurityAdaptor/SecurityAdaptor/*.{h,m}'
+    s.public_header_files = 'SecurityAdaptor/SecurityAdaptor/*.{h,m}'
 end
