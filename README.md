@@ -7,6 +7,7 @@
     pod repo add MinsolSpec https://github.com/minsol/MinsolSpec.git
 ```
 注意是私有Cocoapods的仓库，不是源代码的那个仓库。
+
 2. 将本地调试好的 podspec 推送到私有仓库
 ```objc
     pod repo push MinsolSpec xxxx.podspec --allow-warnings --use-libraries
