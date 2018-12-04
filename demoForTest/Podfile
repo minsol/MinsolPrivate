@@ -10,6 +10,7 @@ target 'demo' do
     pod 'AFNetworking', '~> 3.1.0'
     pod 'SDWebImage', '>= 4.0.0'
     pod 'GDTMobSDK', '~> 4.8.1' #这里改成你想要的版本号
+    pod 'FMDB'
 end
 
 #这个用于测试本地库和远程库

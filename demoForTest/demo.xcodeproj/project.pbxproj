@@ -49,6 +49,14 @@
 		C630E38B2182A61900522A0C /* YDTCorpizeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3552182A61900522A0C /* YDTCorpizeAd.m */; };
 		C630E38C2182A61900522A0C /* YDTAdNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3572182A61900522A0C /* YDTAdNetWorkManager.m */; };
 		C630E38D2182A61900522A0C /* YDTAdHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3592182A61900522A0C /* YDTAdHandler.m */; };
+		C6B42BD821B6216100A19C2F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6B42BCA21B6216100A19C2F /* LICENSE */; };
+		C6B42BD921B6216100A19C2F /* DatabaseAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BCC21B6216100A19C2F /* DatabaseAdaptor.m */; };
+		C6B42BDA21B6216100A19C2F /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BCE21B6216100A19C2F /* Article.m */; };
+		C6B42BDB21B6216100A19C2F /* BaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BCF21B6216100A19C2F /* BaseTable.m */; };
+		C6B42BDC21B6216100A19C2F /* ArticleTable.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BD221B6216100A19C2F /* ArticleTable.m */; };
+		C6B42BDD21B6216100A19C2F /* ArticleDatabaseAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BD521B6216100A19C2F /* ArticleDatabaseAdaptor.m */; };
+		C6B42BDE21B6216100A19C2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6B42BD621B6216100A19C2F /* README.md */; };
+		C6B42BDF21B6216100A19C2F /* A8FMDB.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6B42BD721B6216100A19C2F /* A8FMDB.podspec */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
 		C6DB2A5A218A926A00F63CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A59218A926A00F63CFB /* ViewController.m */; };
 		C6DB2A5D218A926A00F63CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB2A5B218A926A00F63CFB /* Main.storyboard */; };
@@ -154,6 +162,19 @@
 		C630E3592182A61900522A0C /* YDTAdHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTAdHandler.m; sourceTree = "<group>"; };
 		C630E35A2182A61900522A0C /* YDTAdNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTAdNetWorkManager.h; sourceTree = "<group>"; };
 		C630E35B2182A61900522A0C /* AdvertisingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisingDelegate.h; sourceTree = "<group>"; };
+		C6B42BCA21B6216100A19C2F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C6B42BCC21B6216100A19C2F /* DatabaseAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseAdaptor.m; sourceTree = "<group>"; };
+		C6B42BCD21B6216100A19C2F /* ArticleTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTable.h; sourceTree = "<group>"; };
+		C6B42BCE21B6216100A19C2F /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		C6B42BCF21B6216100A19C2F /* BaseTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTable.m; sourceTree = "<group>"; };
+		C6B42BD021B6216100A19C2F /* ArticleDatabaseAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDatabaseAdaptor.h; sourceTree = "<group>"; };
+		C6B42BD121B6216100A19C2F /* DatabaseAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseAdaptor.h; sourceTree = "<group>"; };
+		C6B42BD221B6216100A19C2F /* ArticleTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTable.m; sourceTree = "<group>"; };
+		C6B42BD321B6216100A19C2F /* BaseTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTable.h; sourceTree = "<group>"; };
+		C6B42BD421B6216100A19C2F /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		C6B42BD521B6216100A19C2F /* ArticleDatabaseAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDatabaseAdaptor.m; sourceTree = "<group>"; };
+		C6B42BD621B6216100A19C2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6B42BD721B6216100A19C2F /* A8FMDB.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = A8FMDB.podspec; sourceTree = "<group>"; };
 		C6DB2A53218A926A00F63CFB /* DemoForTestPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForTestPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB2A55218A926A00F63CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6DB2A56218A926A00F63CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -255,6 +276,7 @@
 		76E485902178288E007C9E76 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C6B42BC921B6216100A19C2F /* A8FMDB */,
 				C62D866C21ACEA3600BFA3CB /* A8CycleScrollView */,
 				C630E30C2182A61900522A0C /* A8HttpMessage */,
 				C630E3232182A61900522A0C /* YDTAdvertising */,
@@ -479,6 +501,43 @@
 			path = "LoadAdvertising(请求广告)";
 			sourceTree = "<group>";
 		};
+		C6B42BC921B6216100A19C2F /* A8FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				C6B42BCB21B6216100A19C2F /* A8FMDB */,
+				C6B42BCA21B6216100A19C2F /* LICENSE */,
+				C6B42BD621B6216100A19C2F /* README.md */,
+				C6B42BD721B6216100A19C2F /* A8FMDB.podspec */,
+			);
+			name = A8FMDB;
+			path = ../../A8FMDB;
+			sourceTree = "<group>";
+		};
+		C6B42BCB21B6216100A19C2F /* A8FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				C6B42BE021B6233A00A19C2F /* Article */,
+				C6B42BD321B6216100A19C2F /* BaseTable.h */,
+				C6B42BCF21B6216100A19C2F /* BaseTable.m */,
+				C6B42BD121B6216100A19C2F /* DatabaseAdaptor.h */,
+				C6B42BCC21B6216100A19C2F /* DatabaseAdaptor.m */,
+			);
+			path = A8FMDB;
+			sourceTree = "<group>";
+		};
+		C6B42BE021B6233A00A19C2F /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				C6B42BD021B6216100A19C2F /* ArticleDatabaseAdaptor.h */,
+				C6B42BD521B6216100A19C2F /* ArticleDatabaseAdaptor.m */,
+				C6B42BCD21B6216100A19C2F /* ArticleTable.h */,
+				C6B42BD221B6216100A19C2F /* ArticleTable.m */,
+				C6B42BD421B6216100A19C2F /* Article.h */,
+				C6B42BCE21B6216100A19C2F /* Article.m */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
 		C6DB2A54218A926A00F63CFB /* DemoForTestPod */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +636,7 @@
 			files = (
 				76E4859E2178288F007C9E76 /* LaunchScreen.storyboard in Resources */,
 				76E4859B2178288F007C9E76 /* Assets.xcassets in Resources */,
+				C6B42BD821B6216100A19C2F /* LICENSE in Resources */,
 				C6FB044E2189875B00961C2B /* README.md in Resources */,
 				C630E3712182A61900522A0C /* README.md in Resources */,
 				C630E3702182A61900522A0C /* LICENSE in Resources */,
@@ -584,6 +644,8 @@
 				C62D867B21ACEA3600BFA3CB /* LICENSE in Resources */,
 				C62D867C21ACEA3600BFA3CB /* README.md in Resources */,
 				C62D867721ACEA3600BFA3CB /* A8CycleScrollView.podspec in Resources */,
+				C6B42BDF21B6216100A19C2F /* A8FMDB.podspec in Resources */,
+				C6B42BDE21B6216100A19C2F /* README.md in Resources */,
 				C6FB04502189875E00961C2B /* LICENSE in Resources */,
 				C630E3722182A61900522A0C /* A8HttpMessage.podspec in Resources */,
 				C6FB044C2189875700961C2B /* YDTAdvertising.podspec in Resources */,
@@ -646,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B42BD921B6216100A19C2F /* DatabaseAdaptor.m in Sources */,
 				C630E3802182A61900522A0C /* YDTAdvertisingViewLeftImage.m in Sources */,
 				C630E37E2182A61900522A0C /* YDTAdvertisingCell.m in Sources */,
 				C62D867A21ACEA3600BFA3CB /* A8CycleScrollLayout.m in Sources */,
@@ -658,8 +721,10 @@
 				C630E37C2182A61900522A0C /* YDTAdvertisingCellLeftImage.m in Sources */,
 				C630E3882182A61900522A0C /* YDTGDTAd.m in Sources */,
 				C630E3872182A61900522A0C /* YDTADBaseObject.m in Sources */,
+				C6B42BDC21B6216100A19C2F /* ArticleTable.m in Sources */,
 				C630E3892182A61900522A0C /* YDTInmobiAd.m in Sources */,
 				C630E3822182A61900522A0C /* YDTAdvertisingViewLeftImageRightButton.m in Sources */,
+				C6B42BDD21B6216100A19C2F /* ArticleDatabaseAdaptor.m in Sources */,
 				C630E36E2182A61900522A0C /* YDTNetworkResponseObject.m in Sources */,
 				C630E3862182A61900522A0C /* YDTLuomiAd.m in Sources */,
 				C630E36C2182A61900522A0C /* HttpMessageCenter.m in Sources */,
@@ -677,6 +742,8 @@
 				C630E37D2182A61900522A0C /* YDTAdvertisingCellLargeImage.m in Sources */,
 				C630E37F2182A61900522A0C /* YDTAdvertisingCellLargeImageTitle.m in Sources */,
 				C630E36D2182A61900522A0C /* HttpMessageBase.m in Sources */,
+				C6B42BDB21B6216100A19C2F /* BaseTable.m in Sources */,
+				C6B42BDA21B6216100A19C2F /* Article.m in Sources */,
 				C630E3782182A61900522A0C /* YDTAdBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
