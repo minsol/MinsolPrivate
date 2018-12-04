@@ -22,5 +22,5 @@ target 'DemoForTestPod' do
 #        pod 'YDTAdvertising'
 #        pod 'A8HttpMessage'
         pod 'A8CycleScrollView'
-
+        pod 'A8FMDB'
 end
