@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name          = 'A8FMDB'
-    s.version       = '0.0.2'
+    s.version       = '0.0.3'
     s.summary       = '基于 FFDB 的封装 OC 版.'
     s.homepage      = "https://github.com/minsol/MinsolSpec.git"
     s.license       = { :type => 'MIT', :file => 'LICENSE'  }
