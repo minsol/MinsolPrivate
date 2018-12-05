@@ -60,6 +60,10 @@
 		C6B42C1921B6724A00A19C2F /* ArticleDatabaseAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42C1121B6724A00A19C2F /* ArticleDatabaseAdaptor.m */; };
 		C6B42C1A21B6724A00A19C2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6B42C1321B6724A00A19C2F /* README.md */; };
 		C6B42C1B21B6724A00A19C2F /* A8FMDB.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6B42C1421B6724A00A19C2F /* A8FMDB.podspec */; };
+		C6C6934B21B7B98E00EE3358 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6C6934821B7B98E00EE3358 /* README.md */; };
+		C6C6934C21B7B98F00EE3358 /* CornerRadius.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6C6934A21B7B98E00EE3358 /* CornerRadius.podspec */; };
+		C6C6934F21B7B9BD00EE3358 /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */; };
+		C6C6935521B7C9EB00EE3358 /* UIImageView+FastImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
 		C6DB2A5A218A926A00F63CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A59218A926A00F63CFB /* ViewController.m */; };
 		C6DB2A5D218A926A00F63CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB2A5B218A926A00F63CFB /* Main.storyboard */; };
@@ -185,6 +189,12 @@
 		C6B42C1221B6724A00A19C2F /* BaseTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTable.h; sourceTree = "<group>"; };
 		C6B42C1321B6724A00A19C2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6B42C1421B6724A00A19C2F /* A8FMDB.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = A8FMDB.podspec; sourceTree = "<group>"; };
+		C6C6934821B7B98E00EE3358 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6C6934A21B7B98E00EE3358 /* CornerRadius.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CornerRadius.podspec; sourceTree = "<group>"; };
+		C6C6934D21B7B9BD00EE3358 /* UIView+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CornerRadius.h"; sourceTree = "<group>"; };
+		C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRadius.m"; sourceTree = "<group>"; };
+		C6C6935321B7C9EB00EE3358 /* UIImageView+FastImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FastImage.h"; sourceTree = "<group>"; };
+		C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FastImage.m"; sourceTree = "<group>"; };
 		C6DB2A53218A926A00F63CFB /* DemoForTestPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForTestPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB2A55218A926A00F63CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6DB2A56218A926A00F63CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -287,6 +297,7 @@
 		76E485902178288E007C9E76 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C6C6934721B7B98E00EE3358 /* CornerRadius */,
 				C6B42C0621B6724A00A19C2F /* A8FMDB */,
 				C6B42BE421B655C100A19C2F /* SecurityAdaptor */,
 				C62D866C21ACEA3600BFA3CB /* A8CycleScrollView */,
@@ -597,6 +608,28 @@
 			path = Article;
 			sourceTree = "<group>";
 		};
+		C6C6934721B7B98E00EE3358 /* CornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				C6C6934921B7B98E00EE3358 /* CornerRadius */,
+				C6C6934821B7B98E00EE3358 /* README.md */,
+				C6C6934A21B7B98E00EE3358 /* CornerRadius.podspec */,
+			);
+			name = CornerRadius;
+			path = ../../CornerRadius;
+			sourceTree = "<group>";
+		};
+		C6C6934921B7B98E00EE3358 /* CornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				C6C6934D21B7B9BD00EE3358 /* UIView+CornerRadius.h */,
+				C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */,
+				C6C6935321B7C9EB00EE3358 /* UIImageView+FastImage.h */,
+				C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */,
+			);
+			path = CornerRadius;
+			sourceTree = "<group>";
+		};
 		C6DB2A54218A926A00F63CFB /* DemoForTestPod */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,6 +745,8 @@
 				C6B42C1A21B6724A00A19C2F /* README.md in Resources */,
 				C62D867C21ACEA3600BFA3CB /* README.md in Resources */,
 				C62D867721ACEA3600BFA3CB /* A8CycleScrollView.podspec in Resources */,
+				C6C6934C21B7B98F00EE3358 /* CornerRadius.podspec in Resources */,
+				C6C6934B21B7B98E00EE3358 /* README.md in Resources */,
 				C630E3722182A61900522A0C /* A8HttpMessage.podspec in Resources */,
 				C6B42BED21B655C100A19C2F /* SecurityAdaptor.podspec in Resources */,
 				C6FB044C2189875700961C2B /* YDTAdvertising.podspec in Resources */,
@@ -788,6 +823,7 @@
 				C630E38C2182A61900522A0C /* YDTAdNetWorkManager.m in Sources */,
 				C630E37C2182A61900522A0C /* YDTAdvertisingCellLeftImage.m in Sources */,
 				C630E3882182A61900522A0C /* YDTGDTAd.m in Sources */,
+				C6C6935521B7C9EB00EE3358 /* UIImageView+FastImage.m in Sources */,
 				C630E3872182A61900522A0C /* YDTADBaseObject.m in Sources */,
 				C6B42C0121B657AF00A19C2F /* NSData+AES.m in Sources */,
 				C6B42C1921B6724A00A19C2F /* ArticleDatabaseAdaptor.m in Sources */,
@@ -805,6 +841,7 @@
 				C630E38A2182A61900522A0C /* YDTVoiceAd.m in Sources */,
 				C630E3832182A61900522A0C /* YDTAdvertisingViewLargeImage.m in Sources */,
 				C6B42BFE21B657A000A19C2F /* NSData+DES.m in Sources */,
+				C6C6934F21B7B9BD00EE3358 /* UIView+CornerRadius.m in Sources */,
 				76E485932178288E007C9E76 /* AppDelegate.m in Sources */,
 				C62D867921ACEA3600BFA3CB /* A8CycleScrollView.m in Sources */,
 				C630E37A2182A61900522A0C /* YDTVoiceAdModel.m in Sources */,

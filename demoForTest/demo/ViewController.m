@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "A8CycleScrollView.h"
 #import "A8CycleScrollLayout.h"
+#import "UIView+CornerRadius.h"
+#import "UIImageView+FastImage.h"
 
 @interface ViewController ()
 
@@ -18,6 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    view.backgroundColor = [UIColor lightGrayColor];
+//    [view  wj_cornerRadius:20 borderWidth:8 borderColor:[UIColor redColor] rectCornerType:UIRectCornerAllCorners];
+    [view wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+    [view wj_attachBorderWidth:9 borderColor:[UIColor redColor]];
+//    [self.view addSubview:view];
+    
+    UIImageView *imageView  = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+//    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg"]];
+//    imageView.image = [UIImage imageWithData:imageData];
+    [imageView wj_setFastImageWithImagePath:@"//ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg" placeholderImage:nil];
+//    [imageView wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+//    [imageView wj_attachBorderWidth:9 borderColor:[UIColor redColor]];
+    [imageView wj_cornerRadiusRoundingRect];
+    [self.view addSubview:imageView];
+
+    
+    
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
                                   @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
@@ -41,7 +61,7 @@
     A8CycleScrollView *cycleScrollView2 = [A8CycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 280, w, 180) delegate:self placeholderImage:nil];
     cycleScrollView2.titlesGroup = titles;
     cycleScrollView2.delegate = self;
-    [self.view addSubview:cycleScrollView2];
+//    [self.view addSubview:cycleScrollView2];
     //         --- 模拟加载延迟
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         cycleScrollView2.imageURLStringsGroup = imagesURLStrings;
