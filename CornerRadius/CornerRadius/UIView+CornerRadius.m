@@ -78,6 +78,7 @@
 //    maskLayer.frame = rect;
 //    maskLayer.path = maskPath.CGPath;
 //    self.layer.mask = maskLayer;
+    
 }
 
 /**
@@ -87,21 +88,23 @@
  @param borderColor borderColor
  */
 - (void)wj_attachBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor{
-    CGRect rect = self.bounds;
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRect:rect];
-    if ( self.wjRadius || self.wjRoundingCorners ) {
-        maskPath = [UIBezierPath bezierPathWithRoundedRect:rect
-                                         byRoundingCorners:self.wjRoundingCorners
-                                               cornerRadii:CGSizeMake(self.wjRadius, self.wjRadius)];
-    }
-
-    CAShapeLayer *borderLayer=[CAShapeLayer layer];
-    borderLayer.path    =   maskPath.CGPath;
-    borderLayer.fillColor  = [UIColor clearColor].CGColor;
-    borderLayer.strokeColor    = borderColor.CGColor;
-    borderLayer.lineWidth      = borderWidth;
-    borderLayer.frame = rect;
-    [self.layer addSublayer:borderLayer];
+    self.layer.borderColor = borderColor.CGColor;
+    self.layer.borderWidth = borderWidth;
+//    CGRect rect = self.bounds;
+//    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRect:rect];
+//    if ( self.wjRadius || self.wjRoundingCorners ) {
+//        maskPath = [UIBezierPath bezierPathWithRoundedRect:rect
+//                                         byRoundingCorners:self.wjRoundingCorners
+//                                               cornerRadii:CGSizeMake(self.wjRadius, self.wjRadius)];
+//    }
+//
+//    CAShapeLayer *borderLayer=[CAShapeLayer layer];
+//    borderLayer.path    =   maskPath.CGPath;
+//    borderLayer.fillColor  = [UIColor clearColor].CGColor;
+//    borderLayer.strokeColor    = borderColor.CGColor;
+//    borderLayer.lineWidth      = borderWidth;
+//    borderLayer.frame = rect;
+//    [self.layer addSublayer:borderLayer];
 }
 
 #pragma mark property

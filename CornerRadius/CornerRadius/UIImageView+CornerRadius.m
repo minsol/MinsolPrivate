@@ -62,7 +62,7 @@ const char kProcessedImage;
  * @brief clip the cornerRadius with image, UIImageView must be setFrame before, no off-screen-rendered
  */
 - (void)zy_cornerRadiusWithImage:(UIImage *)image cornerRadius:(CGFloat)cornerRadius rectCornerType:(UIRectCorner)rectCornerType {
-
+    
     CGSize size = self.bounds.size;
     CGFloat scale = [UIScreen mainScreen].scale;
     CGSize cornerRadii = CGSizeMake(cornerRadius, cornerRadius);

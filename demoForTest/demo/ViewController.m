@@ -13,6 +13,7 @@
 
 #define kHeight 40
 
+
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *imageArr;
@@ -24,6 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+
+
+    
 }
 
 
@@ -40,14 +44,16 @@
         for (int i=1; i<=total; i++) {
             CGRect frame = CGRectMake(kHeight * (i-1), 2, kHeight, kHeight);
 //            UIView *view = [[UIView alloc] initWithFrame:frame];
-//            view.layer.backgroundColor = [UIColor redColor].CGColor;
+//            view.backgroundColor = [UIColor redColor];
+////            view.layer.backgroundColor = [UIColor redColor].CGColor;
 //            [view wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+//            [view wj_attachBorderWidth:3 borderColor:[UIColor blueColor]];
 //            [cell.contentView addSubview:view];
             
             UIImageView *imageView  = [[UIImageView alloc] initWithFrame:frame];
             imageView.tag = i;
-//            [imageView wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
-            [imageView zy_cornerRadiusAdvance:20 rectCornerType:UIRectCornerTopRight];
+            [imageView wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+//            [imageView zy_cornerRadiusAdvance:20 rectCornerType:UIRectCornerTopRight];
             [cell.contentView addSubview:imageView];
 
 //            UIButton * view = [[UIButton alloc]initWithFrame:frame];
@@ -61,13 +67,20 @@
 ////            label.layer.backgroundColor = [UIColor blueColor].CGColor;
 //            [label wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
 //            [cell.contentView addSubview:label];
+            
+            
+//            UILabel *label = [[UILabel alloc] initWithFrame:frame];
+//            // 重点在此！！设置视图的图层背景色，千万不要直接设置 label.backgroundColor
+//            label.layer.backgroundColor = [UIColor grayColor].CGColor;
+//            label.layer.cornerRadius = 10;
+//            [cell.contentView  addSubview:label];
         }
         
     }
     for (int i=1; i<=total; i++) {
         UIImageView *imageView = [cell viewWithTag:i];
-        NSURL *url = [NSURL URLWithString:[self urlStr:indexPath.row]];
-//        [imageView wj_setFastImageWithImagePath:url placeholderImage:nil];
+//        NSURL *url = [NSURL URLWithString:[self urlStr:indexPath.row]];
+////        [imageView wj_setFastImageWithImagePath:url placeholderImage:nil];
         [imageView wj_setFastImageWithImagePath:@"03" placeholderImage:nil];
     }
     
