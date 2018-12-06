@@ -31,7 +31,7 @@
             self.image = image;
         }
     } else if ([imagePath isKindOfClass:[NSURL class]]) {
-        [self sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:placeholder];
+        [self sd_setImageWithURL:imagePath placeholderImage:placeholder];
     }else if ([imagePath isKindOfClass:[UIImage class]]) {
         self.image = (UIImage *)imagePath;
     }

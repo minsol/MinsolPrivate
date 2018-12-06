@@ -47,6 +47,7 @@
 		C630E38B2182A61900522A0C /* YDTCorpizeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3552182A61900522A0C /* YDTCorpizeAd.m */; };
 		C630E38C2182A61900522A0C /* YDTAdNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3572182A61900522A0C /* YDTAdNetWorkManager.m */; };
 		C630E38D2182A61900522A0C /* YDTAdHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3592182A61900522A0C /* YDTAdHandler.m */; };
+		C6B3D10921B901EA00D973BD /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3D10821B901E900D973BD /* 03.png */; };
 		C6B42BED21B655C100A19C2F /* SecurityAdaptor.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6B42BEA21B655C100A19C2F /* SecurityAdaptor.podspec */; };
 		C6B42BEE21B655C100A19C2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6B42BEB21B655C100A19C2F /* README.md */; };
 		C6B42BF121B6560100A19C2F /* RSATool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B42BEF21B6560000A19C2F /* RSATool.m */; };
@@ -64,6 +65,7 @@
 		C6C6934C21B7B98F00EE3358 /* CornerRadius.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6C6934A21B7B98E00EE3358 /* CornerRadius.podspec */; };
 		C6C6934F21B7B9BD00EE3358 /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */; };
 		C6C6935521B7C9EB00EE3358 /* UIImageView+FastImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */; };
+		C6C6935B21B7E36100EE3358 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6935921B7E36000EE3358 /* UIImageView+CornerRadius.m */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
 		C6DB2A5A218A926A00F63CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A59218A926A00F63CFB /* ViewController.m */; };
 		C6DB2A5D218A926A00F63CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB2A5B218A926A00F63CFB /* Main.storyboard */; };
@@ -167,6 +169,7 @@
 		C630E3592182A61900522A0C /* YDTAdHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTAdHandler.m; sourceTree = "<group>"; };
 		C630E35A2182A61900522A0C /* YDTAdNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTAdNetWorkManager.h; sourceTree = "<group>"; };
 		C630E35B2182A61900522A0C /* AdvertisingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisingDelegate.h; sourceTree = "<group>"; };
+		C6B3D10821B901E900D973BD /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
 		C6B42BEA21B655C100A19C2F /* SecurityAdaptor.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecurityAdaptor.podspec; sourceTree = "<group>"; };
 		C6B42BEB21B655C100A19C2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6B42BEF21B6560000A19C2F /* RSATool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSATool.m; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 		C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRadius.m"; sourceTree = "<group>"; };
 		C6C6935321B7C9EB00EE3358 /* UIImageView+FastImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FastImage.h"; sourceTree = "<group>"; };
 		C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FastImage.m"; sourceTree = "<group>"; };
+		C6C6935921B7E36000EE3358 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
+		C6C6935A21B7E36100EE3358 /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
 		C6DB2A53218A926A00F63CFB /* DemoForTestPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForTestPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB2A55218A926A00F63CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6DB2A56218A926A00F63CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -307,6 +312,7 @@
 				76E485922178288E007C9E76 /* AppDelegate.m */,
 				76E485942178288E007C9E76 /* ViewController.h */,
 				76E485952178288E007C9E76 /* ViewController.m */,
+				C6B3D10821B901E900D973BD /* 03.png */,
 				76E485972178288E007C9E76 /* Main.storyboard */,
 				76E4859A2178288F007C9E76 /* Assets.xcassets */,
 				76E4859C2178288F007C9E76 /* LaunchScreen.storyboard */,
@@ -622,6 +628,8 @@
 		C6C6934921B7B98E00EE3358 /* CornerRadius */ = {
 			isa = PBXGroup;
 			children = (
+				C6C6935A21B7E36100EE3358 /* UIImageView+CornerRadius.h */,
+				C6C6935921B7E36000EE3358 /* UIImageView+CornerRadius.m */,
 				C6C6934D21B7B9BD00EE3358 /* UIView+CornerRadius.h */,
 				C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */,
 				C6C6935321B7C9EB00EE3358 /* UIImageView+FastImage.h */,
@@ -747,6 +755,7 @@
 				C62D867721ACEA3600BFA3CB /* A8CycleScrollView.podspec in Resources */,
 				C6C6934C21B7B98F00EE3358 /* CornerRadius.podspec in Resources */,
 				C6C6934B21B7B98E00EE3358 /* README.md in Resources */,
+				C6B3D10921B901EA00D973BD /* 03.png in Resources */,
 				C630E3722182A61900522A0C /* A8HttpMessage.podspec in Resources */,
 				C6B42BED21B655C100A19C2F /* SecurityAdaptor.podspec in Resources */,
 				C6FB044C2189875700961C2B /* YDTAdvertising.podspec in Resources */,
@@ -853,6 +862,7 @@
 				C630E36D2182A61900522A0C /* HttpMessageBase.m in Sources */,
 				C6B42BF121B6560100A19C2F /* RSATool.m in Sources */,
 				C630E3782182A61900522A0C /* YDTAdBaseModel.m in Sources */,
+				C6C6935B21B7E36100EE3358 /* UIImageView+CornerRadius.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

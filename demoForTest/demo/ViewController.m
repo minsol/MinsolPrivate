@@ -7,12 +7,15 @@
 //
 
 #import "ViewController.h"
-#import "A8CycleScrollView.h"
-#import "A8CycleScrollLayout.h"
 #import "UIView+CornerRadius.h"
 #import "UIImageView+FastImage.h"
+#import "UIImageView+CornerRadius.h"
 
-@interface ViewController ()
+#define kHeight 40
+
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *imageArr;
 
 @end
 
@@ -20,83 +23,174 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
-    view.backgroundColor = [UIColor lightGrayColor];
-//    [view  wj_cornerRadius:20 borderWidth:8 borderColor:[UIColor redColor] rectCornerType:UIRectCornerAllCorners];
-    [view wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
-    [view wj_attachBorderWidth:9 borderColor:[UIColor redColor]];
-//    [self.view addSubview:view];
-    
-    UIImageView *imageView  = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
-//    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg"]];
-//    imageView.image = [UIImage imageWithData:imageData];
-    [imageView wj_setFastImageWithImagePath:@"//ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg" placeholderImage:nil];
-//    [imageView wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
-//    [imageView wj_attachBorderWidth:9 borderColor:[UIColor redColor]];
-    [imageView wj_cornerRadiusRoundingRect];
-    [self.view addSubview:imageView];
-
-    
-    
-    // 情景二：采用网络图片实现
-    NSArray *imagesURLStrings = @[
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg",
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                  ];
-    
-    // 情景三：图片配文字
-    NSArray *titles = @[@"新建交流QQ群：185534916 ",
-                        @"disableScrollGesture可以设置禁止拖动",
-                        @"感谢您的支持，如果下载的"
-                        ];
-    
-    CGFloat w = self.view.bounds.size.width;
-    
-    
-    // 网络加载 --- 创建带标题的图片轮播器
-    A8CycleScrollView *cycleScrollView2 = [A8CycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 280, w, 180) delegate:self placeholderImage:nil];
-    cycleScrollView2.titlesGroup = titles;
-    cycleScrollView2.delegate = self;
-//    [self.view addSubview:cycleScrollView2];
-    //         --- 模拟加载延迟
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        cycleScrollView2.imageURLStringsGroup = imagesURLStrings;
-    });
+    [self.view addSubview:self.tableView];
 }
 
-#pragma mark - A8CycleScrollViewDelegate
-/*
- /** 点击图片回调 */
-- (void)cycleScrollView:(A8CycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 500;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSInteger total = 4;
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        for (int i=1; i<=total; i++) {
+            CGRect frame = CGRectMake(kHeight * (i-1), 2, kHeight, kHeight);
+//            UIView *view = [[UIView alloc] initWithFrame:frame];
+//            view.layer.backgroundColor = [UIColor redColor].CGColor;
+//            [view wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+//            [cell.contentView addSubview:view];
+            
+            UIImageView *imageView  = [[UIImageView alloc] initWithFrame:frame];
+            imageView.tag = i;
+//            [imageView wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+            [imageView zy_cornerRadiusAdvance:20 rectCornerType:UIRectCornerTopRight];
+            [cell.contentView addSubview:imageView];
+
+//            UIButton * view = [[UIButton alloc]initWithFrame:frame];
+//            [view setImage:[UIImage imageNamed:@"03"] forState:UIControlStateNormal];
+//            [view wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+//            [cell.contentView addSubview:view];
+            
+//            UILabel *label = [[UILabel alloc]initWithFrame:frame];
+//            label.text = @"label";
+//            label.backgroundColor = [UIColor redColor];
+////            label.layer.backgroundColor = [UIColor blueColor].CGColor;
+//            [label wj_cornerRadius:30 rectCornerType:UIRectCornerTopRight];
+//            [cell.contentView addSubview:label];
+        }
+        
+    }
+    for (int i=1; i<=total; i++) {
+        UIImageView *imageView = [cell viewWithTag:i];
+        NSURL *url = [NSURL URLWithString:[self urlStr:indexPath.row]];
+//        [imageView wj_setFastImageWithImagePath:url placeholderImage:nil];
+        [imageView wj_setFastImageWithImagePath:@"03" placeholderImage:nil];
+    }
+    
+    return cell;
 }
 
-//// ========== 轮播自定义cell ==========
-///** 如果你需要自定义cell样式，请在实现此代理方法返回你的自定义cell的class。 */
-//- (Class)customCollectionViewCellClassForCycleScrollView:(A8CycleScrollView *)view{
-//    return [A8CycleScrollCell class];
-//}
-///** 如果你自定义了cell样式，请在实现此代理方法为你的cell填充数据以及其它一系列设置 */
-//- (void)setupCustomCell:(UICollectionViewCell *)cell forIndex:(NSInteger)index cycleScrollView:(A8CycleScrollView *)view{
-//    NSLog(@"%@",cell);
-//}
-
-// ========== 轮播自定义FlowLayout ==========
-/** 如果你需要自定义UICollectionViewFlowLayout样式，请在实现此代理方法 */
--(UICollectionViewFlowLayout*)customCollectionViewFlowLayoutForCycleScrollView:(A8CycleScrollView *)view{
-    A8CycleScrollLayout *bannerLayout = [[A8CycleScrollLayout alloc] init];
-    return bannerLayout;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return kHeight+4;
 }
+- (NSString *)urlStr:(NSInteger)row {
+    NSInteger count = self.imageArr.count;
+    NSInteger index = arc4random() % count;
+    return [self.imageArr objectAtIndex:index];
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
+}
+
+- (NSArray *)imageArr {
+    if (!_imageArr) {
+        _imageArr = @[@"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/08.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/09.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/11/10.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/12/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/12/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/12/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/12/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/12/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/12/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/12/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/13/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/13/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/13/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/13/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/13/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/13/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/13/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/14/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/14/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/14/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/14/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/14/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/14/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/15/08.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/08.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/16/09.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/17/08.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/18/08.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/08.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/19/09.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/01.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/02.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/03.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/04.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/05.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/06.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/07.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/08.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/09.jpg",
+                      @"http://pic.meizitu.com/wp-content/uploads/2015a/11/20/10.jpg"];
+    }
+    return _imageArr;
+}
+
+
+
+
 
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
 }
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 

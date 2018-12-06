@@ -54,20 +54,30 @@
  @param rectCornerType rectCornerType
  */
 - (void)wj_cornerRadius:(CGFloat)cornerRadius rectCornerType:(UIRectCorner)rectCornerType{
-    self.wjRadius = cornerRadius;
-    self.wjRoundingCorners = rectCornerType;
-    CGRect rect = self.bounds;
-    // Create the path
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:rect
-                                                   byRoundingCorners:rectCornerType
-                                                         cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+
+    //方式一：
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = true;
     
-    // Create the shape layer and set its path
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    maskLayer.frame = rect;
-    maskLayer.path = maskPath.CGPath;
-    // Set the newly created shape layer as the mask for the view's layer
-    self.layer.mask = maskLayer;
+    //方式二：设置光栅化
+    //为了避免这种情况，可以尝试开启 CALayer.shouldRasterize 属性，但这会把原本离屏渲染的操作转嫁到 CPU 上去。
+//    self.layer.cornerRadius = cornerRadius;
+//    self.layer.masksToBounds = true;
+//    self.layer.shouldRasterize = YES;
+//    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    
+    //方式三：设置遮罩 卡的要死！！！！！
+//    self.wjRadius = cornerRadius;
+//    self.wjRoundingCorners = rectCornerType;
+//    CGRect rect = self.bounds;
+//    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:rect
+//                                                   byRoundingCorners:rectCornerType
+//                                                         cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+//
+//    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+//    maskLayer.frame = rect;
+//    maskLayer.path = maskPath.CGPath;
+//    self.layer.mask = maskLayer;
 }
 
 /**

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name          = 'CornerRadius'
-    s.version       = '0.0.2'
+    s.version       = '0.0.3'
     s.summary       = '一个快速切圆角低消耗的Category'
     s.homepage      = "https://github.com/minsol/MinsolSpec.git"
     s.license       = { :type => 'MIT', :file => 'LICENSE'  }
