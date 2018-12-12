@@ -10,6 +10,7 @@
 #import "UIView+CornerRadius.h"
 #import "UIImageView+FastImage.h"
 #import "UIImageView+CornerRadius.h"
+#import "NSDictionary+AddParams.h"
 
 #define kHeight 40
 
@@ -25,9 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    /// 方式一
+    NSDictionary *params = [@{@"key":@"value"} addParam:^(DictionaryParamMaker *make) {
+        make.addParam(@"key1",@"value1").addParam(@"key2",@"value2");
+    }];
+    NSLog(@"%@",params);
 
+    /// 方式二
+    NSDictionary *params2 = [NSMutableDictionary dictionaryWithDictionary:@{@"key":@"value"}].addParam(@"key1",@"value1").addParam(@"key2",@"value2");
+    NSLog(@"%@",params2);
 
-    
 }
 
 

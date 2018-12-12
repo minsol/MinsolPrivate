@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name          = 'A8HttpMessage'
-    s.version       = '0.0.2'
+    s.version       = '0.0.3'
     s.summary       = 'A8HttpMessage网络请求私有库.'
     s.homepage      = "https://github.com/minsol/MinsolSpec.git"
     s.license       = { :type => 'MIT', :file => 'LICENSE'  }
