@@ -19,7 +19,7 @@
 @end
 
 
-@implementation NSMutableDictionary (YDTNetworkParam)
+@implementation NSMutableDictionary (AddParams)
 
 #pragma mark - Chaining
 - (NSMutableDictionary *(^)(NSString *key, id object))addParam{
