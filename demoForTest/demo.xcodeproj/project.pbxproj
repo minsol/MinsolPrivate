@@ -66,6 +66,7 @@
 		C6C6934F21B7B9BD00EE3358 /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */; };
 		C6C6935521B7C9EB00EE3358 /* UIImageView+FastImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */; };
 		C6C6935B21B7E36100EE3358 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6935921B7E36000EE3358 /* UIImageView+CornerRadius.m */; };
+		C6CF43FA21C0BD4F0048CF25 /* NSMutableDictionary+YDTNetworkParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CF43F921C0BD4F0048CF25 /* NSMutableDictionary+YDTNetworkParam.m */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
 		C6DB2A5A218A926A00F63CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A59218A926A00F63CFB /* ViewController.m */; };
 		C6DB2A5D218A926A00F63CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB2A5B218A926A00F63CFB /* Main.storyboard */; };
@@ -200,6 +201,8 @@
 		C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FastImage.m"; sourceTree = "<group>"; };
 		C6C6935921B7E36000EE3358 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
 		C6C6935A21B7E36100EE3358 /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
+		C6CF43F821C0BD4F0048CF25 /* NSMutableDictionary+YDTNetworkParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+YDTNetworkParam.h"; sourceTree = "<group>"; };
+		C6CF43F921C0BD4F0048CF25 /* NSMutableDictionary+YDTNetworkParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+YDTNetworkParam.m"; sourceTree = "<group>"; };
 		C6DB2A53218A926A00F63CFB /* DemoForTestPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForTestPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB2A55218A926A00F63CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6DB2A56218A926A00F63CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -401,6 +404,8 @@
 				C630E3162182A61900522A0C /* YDTNetworkResponseObject.m */,
 				C630E3152182A61900522A0C /* YDTNetworkTool.h */,
 				C630E3182182A61900522A0C /* YDTNetworkTool.m */,
+				C6CF43F821C0BD4F0048CF25 /* NSMutableDictionary+YDTNetworkParam.h */,
+				C6CF43F921C0BD4F0048CF25 /* NSMutableDictionary+YDTNetworkParam.m */,
 			);
 			path = NetWorkingTool;
 			sourceTree = "<group>";
@@ -820,6 +825,7 @@
 			files = (
 				C6B42C1721B6724A00A19C2F /* Article.m in Sources */,
 				C630E3802182A61900522A0C /* YDTAdvertisingViewLeftImage.m in Sources */,
+				C6CF43FA21C0BD4F0048CF25 /* NSMutableDictionary+YDTNetworkParam.m in Sources */,
 				C630E37E2182A61900522A0C /* YDTAdvertisingCell.m in Sources */,
 				C62D867A21ACEA3600BFA3CB /* A8CycleScrollLayout.m in Sources */,
 				C630E3812182A61900522A0C /* YDTNewsTagView.m in Sources */,

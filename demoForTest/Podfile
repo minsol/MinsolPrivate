@@ -7,7 +7,8 @@ target 'demo' do
     pod 'InMobiSDK', '~> 7.0.1'
     pod 'Masonry', '~> 1.1.0'
     pod 'OpenUDID', '~> 1.0.0'
-    pod 'AFNetworking', '~> 3.1.0'
+#    pod 'AFNetworking', '~> 3.1.0'#使用大于等于3.1.0 但小于3.2.0的版本
+    pod 'AFNetworking'
     pod 'SDWebImage', '>= 4.0.0'
     pod 'GDTMobSDK', '~> 4.8.1' #这里改成你想要的版本号
     pod 'FMDB'
