@@ -24,3 +24,6 @@
 ```objc
     pod update --verbose --no-repo-update
 ```
+5. Author
+Name : Minsol
+Email : minsol0421@163.com
