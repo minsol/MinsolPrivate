@@ -66,6 +66,23 @@
 		C6C6934F21B7B9BD00EE3358 /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6934E21B7B9BD00EE3358 /* UIView+CornerRadius.m */; };
 		C6C6935521B7C9EB00EE3358 /* UIImageView+FastImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */; };
 		C6C6935B21B7E36100EE3358 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C6935921B7E36000EE3358 /* UIImageView+CornerRadius.m */; };
+		C6CD06A221C9E6C000EA2A33 /* NSObject+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD069921C9E6C000EA2A33 /* NSObject+AvoidCrash.m */; };
+		C6CD06A321C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD069A21C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.m */; };
+		C6CD06A421C9E6C000EA2A33 /* CrashAvoidManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD069C21C9E6C000EA2A33 /* CrashAvoidManager.m */; };
+		C6CD06AB21C9E77B00EA2A33 /* NSDictionary+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06AA21C9E77B00EA2A33 /* NSDictionary+AvoidCrash.m */; };
+		C6CD06AD21C9E7BF00EA2A33 /* NSArray+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06AC21C9E7BF00EA2A33 /* NSArray+AvoidCrash.m */; };
+		C6CD06B021C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06AF21C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.m */; };
+		C6CD06C821C9ECC600EA2A33 /* ActionTrack.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6CD06B221C9ECC500EA2A33 /* ActionTrack.podspec */; };
+		C6CD06C921C9ECC600EA2A33 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6CD06B321C9ECC500EA2A33 /* README.md */; };
+		C6CD06CA21C9ECC600EA2A33 /* DataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06B821C9ECC500EA2A33 /* DataContainer.m */; };
+		C6CD06CB21C9ECC600EA2A33 /* MethodSwizzingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06B921C9ECC500EA2A33 /* MethodSwizzingTool.m */; };
+		C6CD06CC21C9ECC600EA2A33 /* Info.json in Resources */ = {isa = PBXBuildFile; fileRef = C6CD06BB21C9ECC500EA2A33 /* Info.json */; };
+		C6CD06CD21C9ECC600EA2A33 /* InfoDic.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6CD06BC21C9ECC500EA2A33 /* InfoDic.plist */; };
+		C6CD06CE21C9ECC600EA2A33 /* UIControl+Analysis.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06BE21C9ECC500EA2A33 /* UIControl+Analysis.m */; };
+		C6CD06CF21C9ECC600EA2A33 /* UICollectionView+Analysis.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06BF21C9ECC500EA2A33 /* UICollectionView+Analysis.m */; };
+		C6CD06D021C9ECC600EA2A33 /* UITableView+Analysis.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06C121C9ECC500EA2A33 /* UITableView+Analysis.m */; };
+		C6CD06D121C9ECC600EA2A33 /* UIGestureRecognizer+Analysis.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06C521C9ECC500EA2A33 /* UIGestureRecognizer+Analysis.m */; };
+		C6CD06D221C9ECC600EA2A33 /* UIViewController+Analysis.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06C621C9ECC500EA2A33 /* UIViewController+Analysis.m */; };
 		C6CF43FD21C0E13C0048CF25 /* DictionaryParamMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CF43FC21C0E13C0048CF25 /* DictionaryParamMaker.m */; };
 		C6CF440321C0E3420048CF25 /* NSDictionary+AddParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CF440221C0E3420048CF25 /* NSDictionary+AddParams.m */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
@@ -202,6 +219,37 @@
 		C6C6935421B7C9EB00EE3358 /* UIImageView+FastImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FastImage.m"; sourceTree = "<group>"; };
 		C6C6935921B7E36000EE3358 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
 		C6C6935A21B7E36100EE3358 /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
+		C6CD069921C9E6C000EA2A33 /* NSObject+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AvoidCrash.m"; sourceTree = "<group>"; };
+		C6CD069A21C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AvoidCrash.m"; sourceTree = "<group>"; };
+		C6CD069B21C9E6C000EA2A33 /* NSArray+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AvoidCrash.h"; sourceTree = "<group>"; };
+		C6CD069C21C9E6C000EA2A33 /* CrashAvoidManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashAvoidManager.m; sourceTree = "<group>"; };
+		C6CD069D21C9E6C000EA2A33 /* NSObject+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AvoidCrash.h"; sourceTree = "<group>"; };
+		C6CD069E21C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AvoidCrash.h"; sourceTree = "<group>"; };
+		C6CD069F21C9E6C000EA2A33 /* CrashAvoidConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashAvoidConst.h; sourceTree = "<group>"; };
+		C6CD06A021C9E6C000EA2A33 /* CrashAvoidManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashAvoidManager.h; sourceTree = "<group>"; };
+		C6CD06A921C9E77B00EA2A33 /* NSDictionary+AvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AvoidCrash.h"; sourceTree = "<group>"; };
+		C6CD06AA21C9E77B00EA2A33 /* NSDictionary+AvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AvoidCrash.m"; sourceTree = "<group>"; };
+		C6CD06AC21C9E7BF00EA2A33 /* NSArray+AvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AvoidCrash.m"; sourceTree = "<group>"; };
+		C6CD06AE21C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+AvoidCrash.h"; sourceTree = "<group>"; };
+		C6CD06AF21C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+AvoidCrash.m"; sourceTree = "<group>"; };
+		C6CD06B221C9ECC500EA2A33 /* ActionTrack.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionTrack.podspec; sourceTree = "<group>"; };
+		C6CD06B321C9ECC500EA2A33 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6CD06B621C9ECC500EA2A33 /* DataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataContainer.h; sourceTree = "<group>"; };
+		C6CD06B721C9ECC500EA2A33 /* MethodSwizzingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzingTool.h; sourceTree = "<group>"; };
+		C6CD06B821C9ECC500EA2A33 /* DataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataContainer.m; sourceTree = "<group>"; };
+		C6CD06B921C9ECC500EA2A33 /* MethodSwizzingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzingTool.m; sourceTree = "<group>"; };
+		C6CD06BB21C9ECC500EA2A33 /* Info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Info.json; sourceTree = "<group>"; };
+		C6CD06BC21C9ECC500EA2A33 /* InfoDic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoDic.plist; sourceTree = "<group>"; };
+		C6CD06BE21C9ECC500EA2A33 /* UIControl+Analysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Analysis.m"; sourceTree = "<group>"; };
+		C6CD06BF21C9ECC500EA2A33 /* UICollectionView+Analysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Analysis.m"; sourceTree = "<group>"; };
+		C6CD06C021C9ECC500EA2A33 /* UIGestureRecognizer+Analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Analysis.h"; sourceTree = "<group>"; };
+		C6CD06C121C9ECC500EA2A33 /* UITableView+Analysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Analysis.m"; sourceTree = "<group>"; };
+		C6CD06C221C9ECC500EA2A33 /* UIViewController+Analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Analysis.h"; sourceTree = "<group>"; };
+		C6CD06C321C9ECC500EA2A33 /* UIControl+Analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Analysis.h"; sourceTree = "<group>"; };
+		C6CD06C421C9ECC500EA2A33 /* UICollectionView+Analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Analysis.h"; sourceTree = "<group>"; };
+		C6CD06C521C9ECC500EA2A33 /* UIGestureRecognizer+Analysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Analysis.m"; sourceTree = "<group>"; };
+		C6CD06C621C9ECC500EA2A33 /* UIViewController+Analysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Analysis.m"; sourceTree = "<group>"; };
+		C6CD06C721C9ECC500EA2A33 /* UITableView+Analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Analysis.h"; sourceTree = "<group>"; };
 		C6CF43FB21C0E13C0048CF25 /* DictionaryParamMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryParamMaker.h; sourceTree = "<group>"; };
 		C6CF43FC21C0E13C0048CF25 /* DictionaryParamMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryParamMaker.m; sourceTree = "<group>"; };
 		C6CF440121C0E3420048CF25 /* NSDictionary+AddParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AddParams.h"; sourceTree = "<group>"; };
@@ -308,6 +356,8 @@
 		76E485902178288E007C9E76 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C6CD06B121C9ECC500EA2A33 /* ActionTrack */,
+				C6CD068A21C9E62000EA2A33 /* AvoidCrash */,
 				C6C6934721B7B98E00EE3358 /* CornerRadius */,
 				C6B42C0621B6724A00A19C2F /* A8FMDB */,
 				C6B42BE421B655C100A19C2F /* SecurityAdaptor */,
@@ -648,6 +698,93 @@
 			path = CornerRadius;
 			sourceTree = "<group>";
 		};
+		C6CD068A21C9E62000EA2A33 /* AvoidCrash */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD069821C9E6C000EA2A33 /* AvoidCrash */,
+			);
+			name = AvoidCrash;
+			path = ../../AvoidCrash;
+			sourceTree = "<group>";
+		};
+		C6CD069821C9E6C000EA2A33 /* AvoidCrash */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD069F21C9E6C000EA2A33 /* CrashAvoidConst.h */,
+				C6CD06A021C9E6C000EA2A33 /* CrashAvoidManager.h */,
+				C6CD069C21C9E6C000EA2A33 /* CrashAvoidManager.m */,
+				C6CD069B21C9E6C000EA2A33 /* NSArray+AvoidCrash.h */,
+				C6CD06AC21C9E7BF00EA2A33 /* NSArray+AvoidCrash.m */,
+				C6CD069E21C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.h */,
+				C6CD069A21C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.m */,
+				C6CD069D21C9E6C000EA2A33 /* NSObject+AvoidCrash.h */,
+				C6CD069921C9E6C000EA2A33 /* NSObject+AvoidCrash.m */,
+				C6CD06A921C9E77B00EA2A33 /* NSDictionary+AvoidCrash.h */,
+				C6CD06AA21C9E77B00EA2A33 /* NSDictionary+AvoidCrash.m */,
+				C6CD06AE21C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.h */,
+				C6CD06AF21C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.m */,
+			);
+			path = AvoidCrash;
+			sourceTree = "<group>";
+		};
+		C6CD06B121C9ECC500EA2A33 /* ActionTrack */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD06B221C9ECC500EA2A33 /* ActionTrack.podspec */,
+				C6CD06B321C9ECC500EA2A33 /* README.md */,
+				C6CD06B421C9ECC500EA2A33 /* ActionTrack */,
+			);
+			name = ActionTrack;
+			path = ../../ActionTrack;
+			sourceTree = "<group>";
+		};
+		C6CD06B421C9ECC500EA2A33 /* ActionTrack */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD06B521C9ECC500EA2A33 /* Tools */,
+				C6CD06BA21C9ECC500EA2A33 /* Source */,
+				C6CD06BD21C9ECC500EA2A33 /* HookClass */,
+			);
+			path = ActionTrack;
+			sourceTree = "<group>";
+		};
+		C6CD06B521C9ECC500EA2A33 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD06B621C9ECC500EA2A33 /* DataContainer.h */,
+				C6CD06B821C9ECC500EA2A33 /* DataContainer.m */,
+				C6CD06B721C9ECC500EA2A33 /* MethodSwizzingTool.h */,
+				C6CD06B921C9ECC500EA2A33 /* MethodSwizzingTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C6CD06BA21C9ECC500EA2A33 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD06BB21C9ECC500EA2A33 /* Info.json */,
+				C6CD06BC21C9ECC500EA2A33 /* InfoDic.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C6CD06BD21C9ECC500EA2A33 /* HookClass */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD06C421C9ECC500EA2A33 /* UICollectionView+Analysis.h */,
+				C6CD06BF21C9ECC500EA2A33 /* UICollectionView+Analysis.m */,
+				C6CD06C321C9ECC500EA2A33 /* UIControl+Analysis.h */,
+				C6CD06BE21C9ECC500EA2A33 /* UIControl+Analysis.m */,
+				C6CD06C021C9ECC500EA2A33 /* UIGestureRecognizer+Analysis.h */,
+				C6CD06C521C9ECC500EA2A33 /* UIGestureRecognizer+Analysis.m */,
+				C6CD06C721C9ECC500EA2A33 /* UITableView+Analysis.h */,
+				C6CD06C121C9ECC500EA2A33 /* UITableView+Analysis.m */,
+				C6CD06C221C9ECC500EA2A33 /* UIViewController+Analysis.h */,
+				C6CD06C621C9ECC500EA2A33 /* UIViewController+Analysis.m */,
+			);
+			path = HookClass;
+			sourceTree = "<group>";
+		};
 		C6DB2A54218A926A00F63CFB /* DemoForTestPod */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,14 +892,18 @@
 			files = (
 				76E4859E2178288F007C9E76 /* LaunchScreen.storyboard in Resources */,
 				76E4859B2178288F007C9E76 /* Assets.xcassets in Resources */,
+				C6CD06CC21C9ECC600EA2A33 /* Info.json in Resources */,
+				C6CD06CD21C9ECC600EA2A33 /* InfoDic.plist in Resources */,
 				C6FB044E2189875B00961C2B /* README.md in Resources */,
 				C630E3712182A61900522A0C /* README.md in Resources */,
 				C6B42C1B21B6724A00A19C2F /* A8FMDB.podspec in Resources */,
 				C6B42BEE21B655C100A19C2F /* README.md in Resources */,
+				C6CD06C921C9ECC600EA2A33 /* README.md in Resources */,
 				76E485992178288E007C9E76 /* Main.storyboard in Resources */,
 				C6B42C1A21B6724A00A19C2F /* README.md in Resources */,
 				C62D867C21ACEA3600BFA3CB /* README.md in Resources */,
 				C62D867721ACEA3600BFA3CB /* A8CycleScrollView.podspec in Resources */,
+				C6CD06C821C9ECC600EA2A33 /* ActionTrack.podspec in Resources */,
 				C6C6934C21B7B98F00EE3358 /* CornerRadius.podspec in Resources */,
 				C6C6934B21B7B98E00EE3358 /* README.md in Resources */,
 				C6B3D10921B901EA00D973BD /* 03.png in Resources */,
@@ -829,6 +970,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B42C1721B6724A00A19C2F /* Article.m in Sources */,
+				C6CD06D021C9ECC600EA2A33 /* UITableView+Analysis.m in Sources */,
 				C630E3802182A61900522A0C /* YDTAdvertisingViewLeftImage.m in Sources */,
 				C6CF440321C0E3420048CF25 /* NSDictionary+AddParams.m in Sources */,
 				C630E37E2182A61900522A0C /* YDTAdvertisingCell.m in Sources */,
@@ -841,10 +983,14 @@
 				C630E3792182A61900522A0C /* YDTCorpizeAdModel.m in Sources */,
 				C630E3852182A61900522A0C /* YDTAdvertisingViewLargeImageTitle.m in Sources */,
 				C630E38C2182A61900522A0C /* YDTAdNetWorkManager.m in Sources */,
+				C6CD06CE21C9ECC600EA2A33 /* UIControl+Analysis.m in Sources */,
 				C630E37C2182A61900522A0C /* YDTAdvertisingCellLeftImage.m in Sources */,
+				C6CD06D121C9ECC600EA2A33 /* UIGestureRecognizer+Analysis.m in Sources */,
 				C630E3882182A61900522A0C /* YDTGDTAd.m in Sources */,
+				C6CD06D221C9ECC600EA2A33 /* UIViewController+Analysis.m in Sources */,
 				C6C6935521B7C9EB00EE3358 /* UIImageView+FastImage.m in Sources */,
 				C630E3872182A61900522A0C /* YDTADBaseObject.m in Sources */,
+				C6CD06AB21C9E77B00EA2A33 /* NSDictionary+AvoidCrash.m in Sources */,
 				C6B42C0121B657AF00A19C2F /* NSData+AES.m in Sources */,
 				C6B42C1921B6724A00A19C2F /* ArticleDatabaseAdaptor.m in Sources */,
 				C6B42BF421B656C100A19C2F /* SecurityAdaptor.m in Sources */,
@@ -856,24 +1002,32 @@
 				C630E38B2182A61900522A0C /* YDTCorpizeAd.m in Sources */,
 				C6B42C1621B6724A00A19C2F /* BaseTable.m in Sources */,
 				C630E3772182A61900522A0C /* YDTLuomiAdModel.m in Sources */,
+				C6CD06A221C9E6C000EA2A33 /* NSObject+AvoidCrash.m in Sources */,
 				76E485962178288E007C9E76 /* ViewController.m in Sources */,
 				76E485A12178288F007C9E76 /* main.m in Sources */,
 				C630E38A2182A61900522A0C /* YDTVoiceAd.m in Sources */,
 				C630E3832182A61900522A0C /* YDTAdvertisingViewLargeImage.m in Sources */,
 				C6B42BFE21B657A000A19C2F /* NSData+DES.m in Sources */,
+				C6CD06CB21C9ECC600EA2A33 /* MethodSwizzingTool.m in Sources */,
 				C6C6934F21B7B9BD00EE3358 /* UIView+CornerRadius.m in Sources */,
+				C6CD06A421C9E6C000EA2A33 /* CrashAvoidManager.m in Sources */,
 				76E485932178288E007C9E76 /* AppDelegate.m in Sources */,
 				C62D867921ACEA3600BFA3CB /* A8CycleScrollView.m in Sources */,
 				C630E37A2182A61900522A0C /* YDTVoiceAdModel.m in Sources */,
 				C630E38D2182A61900522A0C /* YDTAdHandler.m in Sources */,
 				C6CF43FD21C0E13C0048CF25 /* DictionaryParamMaker.m in Sources */,
 				C630E3842182A61900522A0C /* YDTAdvertisingView.m in Sources */,
+				C6CD06CA21C9ECC600EA2A33 /* DataContainer.m in Sources */,
 				C630E37D2182A61900522A0C /* YDTAdvertisingCellLargeImage.m in Sources */,
 				C630E37F2182A61900522A0C /* YDTAdvertisingCellLargeImageTitle.m in Sources */,
 				C6B42C1821B6724A00A19C2F /* ArticleTable.m in Sources */,
+				C6CD06A321C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.m in Sources */,
 				C630E36D2182A61900522A0C /* HttpMessageBase.m in Sources */,
+				C6CD06CF21C9ECC600EA2A33 /* UICollectionView+Analysis.m in Sources */,
 				C6B42BF121B6560100A19C2F /* RSATool.m in Sources */,
 				C630E3782182A61900522A0C /* YDTAdBaseModel.m in Sources */,
+				C6CD06AD21C9E7BF00EA2A33 /* NSArray+AvoidCrash.m in Sources */,
+				C6CD06B021C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.m in Sources */,
 				C6C6935B21B7E36100EE3358 /* UIImageView+CornerRadius.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

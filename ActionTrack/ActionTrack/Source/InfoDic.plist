@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TABLEVIEW</key>
+	<dict>
+		<key>ViewController/TestTableview/0</key>
+		<dict>
+			<key>userDefined</key>
+			<dict>
+				<key>pagename</key>
+				<string>pagename</string>
+				<key>pageid</key>
+				<string>pageid</string>
+				<key>target</key>
+				<string>target</string>
+				<key>eventid</key>
+				<string>eventid</string>
+			</dict>
+			<key>pagePara</key>
+			<dict>
+				<key>user_grade</key>
+				<dict>
+					<key>containIn</key>
+					<string>1</string>
+					<key>propertyName</key>
+					<string>grade</string>
+					<key>propertyPath</key>
+					<string></string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
