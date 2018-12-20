@@ -469,8 +469,8 @@
 			isa = PBXGroup;
 			children = (
 				C6FB044D2189875B00961C2B /* README.md */,
-				C6FB044B2189875700961C2B /* YDTAdvertising.podspec */,
 				C630E3242182A61900522A0C /* YDTAdvertising */,
+				C6FB044B2189875700961C2B /* YDTAdvertising.podspec */,
 			);
 			name = YDTAdvertising;
 			path = ../../YDTAdvertising;
@@ -490,16 +490,16 @@
 		C630E3252182A61900522A0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C630E3262182A61900522A0C /* YDTCorpizeAdModel.h */,
 				C630E3272182A61900522A0C /* YDTAdBaseModel.h */,
-				C630E3282182A61900522A0C /* YDTLuomiAdModel.m */,
-				C630E3292182A61900522A0C /* YDTAdModel.h */,
-				C630E32A2182A61900522A0C /* YDTVoiceAdModel.h */,
 				C630E32B2182A61900522A0C /* YDTAdBaseModel.m */,
+				C630E3292182A61900522A0C /* YDTAdModel.h */,
+				C630E32F2182A61900522A0C /* YDTAdModel.m */,
+				C630E3262182A61900522A0C /* YDTCorpizeAdModel.h */,
 				C630E32C2182A61900522A0C /* YDTCorpizeAdModel.m */,
 				C630E32D2182A61900522A0C /* YDTLuomiAdModel.h */,
+				C630E3282182A61900522A0C /* YDTLuomiAdModel.m */,
+				C630E32A2182A61900522A0C /* YDTVoiceAdModel.h */,
 				C630E32E2182A61900522A0C /* YDTVoiceAdModel.m */,
-				C630E32F2182A61900522A0C /* YDTAdModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -531,28 +531,20 @@
 		C630E33A2182A61900522A0C /* AdvertisingView */ = {
 			isa = PBXGroup;
 			children = (
-				C630E33B2182A61900522A0C /* YDTNewsTagView.h */,
+				C630E3402182A61900522A0C /* YDTAdvertisingView.h */,
+				C630E3462182A61900522A0C /* YDTAdvertisingView.m */,
+				C630E33E2182A61900522A0C /* YDTAdvertisingViewLargeImage.h */,
+				C630E3452182A61900522A0C /* YDTAdvertisingViewLargeImage.m */,
+				C630E33F2182A61900522A0C /* YDTAdvertisingViewLargeImageTitle.h */,
+				C630E3472182A61900522A0C /* YDTAdvertisingViewLargeImageTitle.m */,
+				C630E3412182A61900522A0C /* YDTAdvertisingViewLeftImage.h */,
 				C630E33C2182A61900522A0C /* YDTAdvertisingViewLeftImage.m */,
 				C630E33D2182A61900522A0C /* YDTAdvertisingViewLeftImageRightButton.h */,
-				C630E33E2182A61900522A0C /* YDTAdvertisingViewLargeImage.h */,
-				C630E33F2182A61900522A0C /* YDTAdvertisingViewLargeImageTitle.h */,
-				C630E3402182A61900522A0C /* YDTAdvertisingView.h */,
-				C630E3412182A61900522A0C /* YDTAdvertisingViewLeftImage.h */,
-				C630E3422182A61900522A0C /* YDTNewsTagView.m */,
-				C630E3432182A61900522A0C /* New Group */,
 				C630E3442182A61900522A0C /* YDTAdvertisingViewLeftImageRightButton.m */,
-				C630E3452182A61900522A0C /* YDTAdvertisingViewLargeImage.m */,
-				C630E3462182A61900522A0C /* YDTAdvertisingView.m */,
-				C630E3472182A61900522A0C /* YDTAdvertisingViewLargeImageTitle.m */,
+				C630E33B2182A61900522A0C /* YDTNewsTagView.h */,
+				C630E3422182A61900522A0C /* YDTNewsTagView.m */,
 			);
 			path = AdvertisingView;
-			sourceTree = "<group>";
-		};
-		C630E3432182A61900522A0C /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C630E3492182A61900522A0C /* AdHandler */ = {
