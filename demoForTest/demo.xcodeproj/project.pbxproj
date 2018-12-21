@@ -88,6 +88,11 @@
 		C6D2D76321CC8A9C00FE525A /* RuntimeInfo.md in Resources */ = {isa = PBXBuildFile; fileRef = C6D2D75E21CC8A9C00FE525A /* RuntimeInfo.md */; };
 		C6D2D76421CC8A9C00FE525A /* RuntimeInfo.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6D2D75F21CC8A9C00FE525A /* RuntimeInfo.podspec */; };
 		C6D2D76521CC8A9C00FE525A /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D2D76221CC8A9C00FE525A /* NSObject+DLIntrospection.m */; };
+		C6D2D7B921CCE63100FE525A /* AppRoutes.md in Resources */ = {isa = PBXBuildFile; fileRef = C6D2D7B421CCE63100FE525A /* AppRoutes.md */; };
+		C6D2D7BA21CCE63100FE525A /* AppRoutes.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6D2D7B521CCE63100FE525A /* AppRoutes.podspec */; };
+		C6D2D7BB21CCE63100FE525A /* AppDelegate+RegisterRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D2D7B721CCE63100FE525A /* AppDelegate+RegisterRoute.m */; };
+		C6D2D7BE21CCE8CA00FE525A /* AppRoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D2D7BD21CCE8CA00FE525A /* AppRoutesViewController.m */; };
+		C6D2D7C121CCE8F800FE525A /* CornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D2D7C021CCE8F800FE525A /* CornerRadiusViewController.m */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
 		C6DB2A5A218A926A00F63CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A59218A926A00F63CFB /* ViewController.m */; };
 		C6DB2A5D218A926A00F63CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB2A5B218A926A00F63CFB /* Main.storyboard */; };
@@ -261,6 +266,14 @@
 		C6D2D75F21CC8A9C00FE525A /* RuntimeInfo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RuntimeInfo.podspec; sourceTree = "<group>"; };
 		C6D2D76121CC8A9C00FE525A /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		C6D2D76221CC8A9C00FE525A /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
+		C6D2D7B421CCE63100FE525A /* AppRoutes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = AppRoutes.md; sourceTree = "<group>"; };
+		C6D2D7B521CCE63100FE525A /* AppRoutes.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppRoutes.podspec; sourceTree = "<group>"; };
+		C6D2D7B721CCE63100FE525A /* AppDelegate+RegisterRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RegisterRoute.m"; sourceTree = "<group>"; };
+		C6D2D7B821CCE63100FE525A /* AppDelegate+RegisterRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RegisterRoute.h"; sourceTree = "<group>"; };
+		C6D2D7BC21CCE8CA00FE525A /* AppRoutesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRoutesViewController.h; sourceTree = "<group>"; };
+		C6D2D7BD21CCE8CA00FE525A /* AppRoutesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppRoutesViewController.m; sourceTree = "<group>"; };
+		C6D2D7BF21CCE8F800FE525A /* CornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerRadiusViewController.h; sourceTree = "<group>"; };
+		C6D2D7C021CCE8F800FE525A /* CornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerRadiusViewController.m; sourceTree = "<group>"; };
 		C6DB2A53218A926A00F63CFB /* DemoForTestPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForTestPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB2A55218A926A00F63CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6DB2A56218A926A00F63CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -363,6 +376,7 @@
 		76E485902178288E007C9E76 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C6D2D7B321CCE63100FE525A /* AppRoutes */,
 				C6D2D75D21CC8A9C00FE525A /* RuntimeInfo */,
 				C6CD06B121C9ECC500EA2A33 /* ActionTrack */,
 				C6CD068A21C9E62000EA2A33 /* AvoidCrash */,
@@ -376,6 +390,10 @@
 				76E485922178288E007C9E76 /* AppDelegate.m */,
 				76E485942178288E007C9E76 /* ViewController.h */,
 				76E485952178288E007C9E76 /* ViewController.m */,
+				C6D2D7BC21CCE8CA00FE525A /* AppRoutesViewController.h */,
+				C6D2D7BD21CCE8CA00FE525A /* AppRoutesViewController.m */,
+				C6D2D7BF21CCE8F800FE525A /* CornerRadiusViewController.h */,
+				C6D2D7C021CCE8F800FE525A /* CornerRadiusViewController.m */,
 				C6B3D10821B901E900D973BD /* 03.png */,
 				76E485972178288E007C9E76 /* Main.storyboard */,
 				76E4859A2178288F007C9E76 /* Assets.xcassets */,
@@ -805,6 +823,26 @@
 			path = RuntimeInfo;
 			sourceTree = "<group>";
 		};
+		C6D2D7B321CCE63100FE525A /* AppRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				C6D2D7B421CCE63100FE525A /* AppRoutes.md */,
+				C6D2D7B521CCE63100FE525A /* AppRoutes.podspec */,
+				C6D2D7B621CCE63100FE525A /* AppRoutes */,
+			);
+			name = AppRoutes;
+			path = ../../AppRoutes;
+			sourceTree = "<group>";
+		};
+		C6D2D7B621CCE63100FE525A /* AppRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				C6D2D7B821CCE63100FE525A /* AppDelegate+RegisterRoute.h */,
+				C6D2D7B721CCE63100FE525A /* AppDelegate+RegisterRoute.m */,
+			);
+			path = AppRoutes;
+			sourceTree = "<group>";
+		};
 		C6DB2A54218A926A00F63CFB /* DemoForTestPod */ = {
 			isa = PBXGroup;
 			children = (
@@ -914,6 +952,7 @@
 				C6D2D76421CC8A9C00FE525A /* RuntimeInfo.podspec in Resources */,
 				76E4859B2178288F007C9E76 /* Assets.xcassets in Resources */,
 				C6CD06CC21C9ECC600EA2A33 /* Info.json in Resources */,
+				C6D2D7BA21CCE63100FE525A /* AppRoutes.podspec in Resources */,
 				C6CD06CD21C9ECC600EA2A33 /* InfoDic.plist in Resources */,
 				C6FB044E2189875B00961C2B /* README.md in Resources */,
 				C630E3712182A61900522A0C /* README.md in Resources */,
@@ -923,6 +962,7 @@
 				76E485992178288E007C9E76 /* Main.storyboard in Resources */,
 				C6B42C1A21B6724A00A19C2F /* README.md in Resources */,
 				C62D867C21ACEA3600BFA3CB /* README.md in Resources */,
+				C6D2D7B921CCE63100FE525A /* AppRoutes.md in Resources */,
 				C62D867721ACEA3600BFA3CB /* A8CycleScrollView.podspec in Resources */,
 				C6CD06C821C9ECC600EA2A33 /* ActionTrack.podspec in Resources */,
 				C6C6934C21B7B98F00EE3358 /* CornerRadius.podspec in Resources */,
@@ -998,6 +1038,7 @@
 				C630E37E2182A61900522A0C /* YDTAdvertisingCell.m in Sources */,
 				C62D867A21ACEA3600BFA3CB /* A8CycleScrollLayout.m in Sources */,
 				C630E3812182A61900522A0C /* YDTNewsTagView.m in Sources */,
+				C6D2D7C121CCE8F800FE525A /* CornerRadiusViewController.m in Sources */,
 				C6B42C1521B6724A00A19C2F /* DatabaseAdaptor.m in Sources */,
 				C630E36F2182A61900522A0C /* YDTNetworkTool.m in Sources */,
 				C6F4438221B67D0500498BBC /* NSString+Hash.m in Sources */,
@@ -1030,6 +1071,7 @@
 				76E485A12178288F007C9E76 /* main.m in Sources */,
 				C630E38A2182A61900522A0C /* YDTVoiceAd.m in Sources */,
 				C630E3832182A61900522A0C /* YDTAdvertisingViewLargeImage.m in Sources */,
+				C6D2D7BB21CCE63100FE525A /* AppDelegate+RegisterRoute.m in Sources */,
 				C6B42BFE21B657A000A19C2F /* NSData+DES.m in Sources */,
 				C6CD06CB21C9ECC600EA2A33 /* MethodSwizzingTool.m in Sources */,
 				C6C6934F21B7B9BD00EE3358 /* UIView+CornerRadius.m in Sources */,
@@ -1052,6 +1094,7 @@
 				C6CD06AD21C9E7BF00EA2A33 /* NSArray+AvoidCrash.m in Sources */,
 				C6CD06B021C9E82500EA2A33 /* NSMutableDictionary+AvoidCrash.m in Sources */,
 				C6C6935B21B7E36100EE3358 /* UIImageView+CornerRadius.m in Sources */,
+				C6D2D7BE21CCE8CA00FE525A /* AppRoutesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,7 +1266,7 @@
 				DEVELOPMENT_TEAM = UKFQF9GW79;
 				FRAMEWORK_SEARCH_PATHS = "\"${PODS_ROOT}/InMobiSDK\"";
 				INFOPLIST_FILE = demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1252,7 +1295,7 @@
 				DEVELOPMENT_TEAM = UKFQF9GW79;
 				FRAMEWORK_SEARCH_PATHS = "\"${PODS_ROOT}/InMobiSDK\"";
 				INFOPLIST_FILE = demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1279,7 +1322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKFQF9GW79;
 				INFOPLIST_FILE = DemoForTestPod/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1298,7 +1341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKFQF9GW79;
 				INFOPLIST_FILE = DemoForTestPod/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,6 +12,7 @@ target 'demo' do
     pod 'SDWebImage', '>= 4.0.0'
     pod 'GDTMobSDK', '~> 4.8.1' #这里改成你想要的版本号
     pod 'FMDB'
+    pod 'JLRoutes'
 end
 
 #这个用于测试本地库和远程库
