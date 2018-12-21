@@ -85,6 +85,9 @@
 		C6CD06D221C9ECC600EA2A33 /* UIViewController+Analysis.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06C621C9ECC500EA2A33 /* UIViewController+Analysis.m */; };
 		C6CF43FD21C0E13C0048CF25 /* DictionaryParamMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CF43FC21C0E13C0048CF25 /* DictionaryParamMaker.m */; };
 		C6CF440321C0E3420048CF25 /* NSDictionary+AddParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CF440221C0E3420048CF25 /* NSDictionary+AddParams.m */; };
+		C6D2D76321CC8A9C00FE525A /* RuntimeInfo.md in Resources */ = {isa = PBXBuildFile; fileRef = C6D2D75E21CC8A9C00FE525A /* RuntimeInfo.md */; };
+		C6D2D76421CC8A9C00FE525A /* RuntimeInfo.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6D2D75F21CC8A9C00FE525A /* RuntimeInfo.podspec */; };
+		C6D2D76521CC8A9C00FE525A /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D2D76221CC8A9C00FE525A /* NSObject+DLIntrospection.m */; };
 		C6DB2A57218A926A00F63CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A56218A926A00F63CFB /* AppDelegate.m */; };
 		C6DB2A5A218A926A00F63CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB2A59218A926A00F63CFB /* ViewController.m */; };
 		C6DB2A5D218A926A00F63CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB2A5B218A926A00F63CFB /* Main.storyboard */; };
@@ -254,6 +257,10 @@
 		C6CF43FC21C0E13C0048CF25 /* DictionaryParamMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryParamMaker.m; sourceTree = "<group>"; };
 		C6CF440121C0E3420048CF25 /* NSDictionary+AddParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AddParams.h"; sourceTree = "<group>"; };
 		C6CF440221C0E3420048CF25 /* NSDictionary+AddParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AddParams.m"; sourceTree = "<group>"; };
+		C6D2D75E21CC8A9C00FE525A /* RuntimeInfo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RuntimeInfo.md; sourceTree = "<group>"; };
+		C6D2D75F21CC8A9C00FE525A /* RuntimeInfo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RuntimeInfo.podspec; sourceTree = "<group>"; };
+		C6D2D76121CC8A9C00FE525A /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
+		C6D2D76221CC8A9C00FE525A /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		C6DB2A53218A926A00F63CFB /* DemoForTestPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForTestPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB2A55218A926A00F63CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6DB2A56218A926A00F63CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -356,6 +363,7 @@
 		76E485902178288E007C9E76 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C6D2D75D21CC8A9C00FE525A /* RuntimeInfo */,
 				C6CD06B121C9ECC500EA2A33 /* ActionTrack */,
 				C6CD068A21C9E62000EA2A33 /* AvoidCrash */,
 				C6C6934721B7B98E00EE3358 /* CornerRadius */,
@@ -777,6 +785,26 @@
 			path = HookClass;
 			sourceTree = "<group>";
 		};
+		C6D2D75D21CC8A9C00FE525A /* RuntimeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C6D2D75E21CC8A9C00FE525A /* RuntimeInfo.md */,
+				C6D2D75F21CC8A9C00FE525A /* RuntimeInfo.podspec */,
+				C6D2D76021CC8A9C00FE525A /* RuntimeInfo */,
+			);
+			name = RuntimeInfo;
+			path = ../../RuntimeInfo;
+			sourceTree = "<group>";
+		};
+		C6D2D76021CC8A9C00FE525A /* RuntimeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C6D2D76121CC8A9C00FE525A /* NSObject+DLIntrospection.h */,
+				C6D2D76221CC8A9C00FE525A /* NSObject+DLIntrospection.m */,
+			);
+			path = RuntimeInfo;
+			sourceTree = "<group>";
+		};
 		C6DB2A54218A926A00F63CFB /* DemoForTestPod */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +911,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E4859E2178288F007C9E76 /* LaunchScreen.storyboard in Resources */,
+				C6D2D76421CC8A9C00FE525A /* RuntimeInfo.podspec in Resources */,
 				76E4859B2178288F007C9E76 /* Assets.xcassets in Resources */,
 				C6CD06CC21C9ECC600EA2A33 /* Info.json in Resources */,
 				C6CD06CD21C9ECC600EA2A33 /* InfoDic.plist in Resources */,
@@ -901,6 +930,7 @@
 				C6B3D10921B901EA00D973BD /* 03.png in Resources */,
 				C630E3722182A61900522A0C /* A8HttpMessage.podspec in Resources */,
 				C6B42BED21B655C100A19C2F /* SecurityAdaptor.podspec in Resources */,
+				C6D2D76321CC8A9C00FE525A /* RuntimeInfo.md in Resources */,
 				C6FB044C2189875700961C2B /* YDTAdvertising.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -981,6 +1011,7 @@
 				C630E3882182A61900522A0C /* YDTGDTAd.m in Sources */,
 				C6CD06D221C9ECC600EA2A33 /* UIViewController+Analysis.m in Sources */,
 				C6C6935521B7C9EB00EE3358 /* UIImageView+FastImage.m in Sources */,
+				C6D2D76521CC8A9C00FE525A /* NSObject+DLIntrospection.m in Sources */,
 				C630E3872182A61900522A0C /* YDTADBaseObject.m in Sources */,
 				C6CD06AB21C9E77B00EA2A33 /* NSDictionary+AvoidCrash.m in Sources */,
 				C6B42C0121B657AF00A19C2F /* NSData+AES.m in Sources */,
