@@ -21,8 +21,17 @@
     [super viewDidLoad];
     NSLog(@"%@",[SecurityAdaptor encodeBase64String:@"minsol"]);
     NSLog(@"%@",[SecurityAdaptor md5:@"minsold"]);
-}
 
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    BOOL canOpen = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"RouteDemo://push/AppRoutesViewController"]];
+    if (canOpen) {
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"RouteDemo://push/AppRoutesViewController"]];
+    }
+    NSLog(@"canOpen %@",canOpen? @"ture":@"false");
+    BOOL open =  [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"RouteDemo://push/AppRoutesViewController"]];
+    NSLog(@"open %@",open? @"ture":@"false");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
