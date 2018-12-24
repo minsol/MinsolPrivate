@@ -7,7 +7,7 @@
 //
 
 #import "AppRoutesViewController.h"
-
+#import "AppDelegate+RegisterRoute.h"
 @interface AppRoutesViewController ()
 
 @end
@@ -18,7 +18,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
 }
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate openURLString:@"RouteDemo://push/CornerRadiusViewController"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

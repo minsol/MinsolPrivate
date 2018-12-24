@@ -23,7 +23,15 @@
 - (BOOL)openURLString:(NSString*)urlString{
     ///汉字编码
     NSString *encodedUrl = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:encodedUrl]];
+    BOOL canOpen = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:encodedUrl]];
+    if (canOpen) {
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:encodedUrl] options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:encodedUrl]];
+        }
+    }
+    return canOpen;
 }
 
 
