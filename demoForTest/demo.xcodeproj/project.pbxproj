@@ -47,6 +47,13 @@
 		C630E38B2182A61900522A0C /* YDTCorpizeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3552182A61900522A0C /* YDTCorpizeAd.m */; };
 		C630E38C2182A61900522A0C /* YDTAdNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3572182A61900522A0C /* YDTAdNetWorkManager.m */; };
 		C630E38D2182A61900522A0C /* YDTAdHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C630E3592182A61900522A0C /* YDTAdHandler.m */; };
+		C68CB0F721D623D700353DFA /* WJUrlRequestHander.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB0F221D623D700353DFA /* WJUrlRequestHander.m */; };
+		C68CB0F821D623D700353DFA /* WJUrlRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB0F321D623D700353DFA /* WJUrlRouterManager.m */; };
+		C68CB0F921D623D700353DFA /* WJUrlRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB0F421D623D700353DFA /* WJUrlRequest.m */; };
+		C68CB0FA21D623D700353DFA /* WJRouter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C68CB0F521D623D700353DFA /* WJRouter.podspec */; };
+		C68CB0FB21D623D700353DFA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C68CB0F621D623D700353DFA /* README.md */; };
+		C68CB10121D6246600353DFA /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB0FE21D6246600353DFA /* NaviViewController.m */; };
+		C68CB10221D6246600353DFA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB0FF21D6246600353DFA /* SecondViewController.m */; };
 		C6B3D10921B901EA00D973BD /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3D10821B901E900D973BD /* 03.png */; };
 		C6B42BED21B655C100A19C2F /* SecurityAdaptor.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6B42BEA21B655C100A19C2F /* SecurityAdaptor.podspec */; };
 		C6B42BEE21B655C100A19C2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6B42BEB21B655C100A19C2F /* README.md */; };
@@ -196,6 +203,18 @@
 		C630E3592182A61900522A0C /* YDTAdHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTAdHandler.m; sourceTree = "<group>"; };
 		C630E35A2182A61900522A0C /* YDTAdNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTAdNetWorkManager.h; sourceTree = "<group>"; };
 		C630E35B2182A61900522A0C /* AdvertisingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisingDelegate.h; sourceTree = "<group>"; };
+		C68CB0EF21D623D700353DFA /* WJUrlRouterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJUrlRouterManager.h; sourceTree = "<group>"; };
+		C68CB0F021D623D700353DFA /* WJUrlRequestHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJUrlRequestHander.h; sourceTree = "<group>"; };
+		C68CB0F121D623D700353DFA /* WJUrlRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJUrlRequest.h; sourceTree = "<group>"; };
+		C68CB0F221D623D700353DFA /* WJUrlRequestHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJUrlRequestHander.m; sourceTree = "<group>"; };
+		C68CB0F321D623D700353DFA /* WJUrlRouterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJUrlRouterManager.m; sourceTree = "<group>"; };
+		C68CB0F421D623D700353DFA /* WJUrlRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJUrlRequest.m; sourceTree = "<group>"; };
+		C68CB0F521D623D700353DFA /* WJRouter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WJRouter.podspec; sourceTree = "<group>"; };
+		C68CB0F621D623D700353DFA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C68CB0FD21D6246500353DFA /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
+		C68CB0FE21D6246600353DFA /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
+		C68CB0FF21D6246600353DFA /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C68CB10021D6246600353DFA /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		C6B3D10821B901E900D973BD /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
 		C6B42BEA21B655C100A19C2F /* SecurityAdaptor.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecurityAdaptor.podspec; sourceTree = "<group>"; };
 		C6B42BEB21B655C100A19C2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -376,6 +395,7 @@
 		76E485902178288E007C9E76 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C68CB0ED21D623D700353DFA /* WJRouter */,
 				C6D2D7B321CCE63100FE525A /* AppRoutes */,
 				C6D2D75D21CC8A9C00FE525A /* RuntimeInfo */,
 				C6CD06B121C9ECC500EA2A33 /* ActionTrack */,
@@ -394,6 +414,7 @@
 				C6D2D7BD21CCE8CA00FE525A /* AppRoutesViewController.m */,
 				C6D2D7BF21CCE8F800FE525A /* CornerRadiusViewController.h */,
 				C6D2D7C021CCE8F800FE525A /* CornerRadiusViewController.m */,
+				C68CB0FC21D6245600353DFA /* WJRouter */,
 				C6B3D10821B901E900D973BD /* 03.png */,
 				76E485972178288E007C9E76 /* Main.storyboard */,
 				76E4859A2178288F007C9E76 /* Assets.xcassets */,
@@ -603,6 +624,41 @@
 				C630E3542182A61900522A0C /* YDTVoiceAd.m */,
 			);
 			path = "LoadAdvertising(请求广告)";
+			sourceTree = "<group>";
+		};
+		C68CB0ED21D623D700353DFA /* WJRouter */ = {
+			isa = PBXGroup;
+			children = (
+				C68CB0EE21D623D700353DFA /* WJRouter */,
+				C68CB0F521D623D700353DFA /* WJRouter.podspec */,
+				C68CB0F621D623D700353DFA /* README.md */,
+			);
+			name = WJRouter;
+			path = ../../WJRouter;
+			sourceTree = "<group>";
+		};
+		C68CB0EE21D623D700353DFA /* WJRouter */ = {
+			isa = PBXGroup;
+			children = (
+				C68CB0EF21D623D700353DFA /* WJUrlRouterManager.h */,
+				C68CB0F021D623D700353DFA /* WJUrlRequestHander.h */,
+				C68CB0F121D623D700353DFA /* WJUrlRequest.h */,
+				C68CB0F221D623D700353DFA /* WJUrlRequestHander.m */,
+				C68CB0F321D623D700353DFA /* WJUrlRouterManager.m */,
+				C68CB0F421D623D700353DFA /* WJUrlRequest.m */,
+			);
+			path = WJRouter;
+			sourceTree = "<group>";
+		};
+		C68CB0FC21D6245600353DFA /* WJRouter */ = {
+			isa = PBXGroup;
+			children = (
+				C68CB0FD21D6246500353DFA /* NaviViewController.h */,
+				C68CB0FE21D6246600353DFA /* NaviViewController.m */,
+				C68CB10021D6246600353DFA /* SecondViewController.h */,
+				C68CB0FF21D6246600353DFA /* SecondViewController.m */,
+			);
+			path = WJRouter;
 			sourceTree = "<group>";
 		};
 		C6B42BE421B655C100A19C2F /* SecurityAdaptor */ = {
@@ -950,7 +1006,9 @@
 			files = (
 				76E4859E2178288F007C9E76 /* LaunchScreen.storyboard in Resources */,
 				C6D2D76421CC8A9C00FE525A /* RuntimeInfo.podspec in Resources */,
+				C68CB0FA21D623D700353DFA /* WJRouter.podspec in Resources */,
 				76E4859B2178288F007C9E76 /* Assets.xcassets in Resources */,
+				C68CB0FB21D623D700353DFA /* README.md in Resources */,
 				C6CD06CC21C9ECC600EA2A33 /* Info.json in Resources */,
 				C6D2D7BA21CCE63100FE525A /* AppRoutes.podspec in Resources */,
 				C6CD06CD21C9ECC600EA2A33 /* InfoDic.plist in Resources */,
@@ -1032,6 +1090,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B42C1721B6724A00A19C2F /* Article.m in Sources */,
+				C68CB0F721D623D700353DFA /* WJUrlRequestHander.m in Sources */,
 				C6CD06D021C9ECC600EA2A33 /* UITableView+Analysis.m in Sources */,
 				C630E3802182A61900522A0C /* YDTAdvertisingViewLeftImage.m in Sources */,
 				C6CF440321C0E3420048CF25 /* NSDictionary+AddParams.m in Sources */,
@@ -1059,12 +1118,15 @@
 				C6B42C1921B6724A00A19C2F /* ArticleDatabaseAdaptor.m in Sources */,
 				C6B42BF421B656C100A19C2F /* SecurityAdaptor.m in Sources */,
 				C630E3892182A61900522A0C /* YDTInmobiAd.m in Sources */,
+				C68CB0F821D623D700353DFA /* WJUrlRouterManager.m in Sources */,
 				C630E3822182A61900522A0C /* YDTAdvertisingViewLeftImageRightButton.m in Sources */,
 				C630E36E2182A61900522A0C /* YDTNetworkResponseObject.m in Sources */,
 				C630E3862182A61900522A0C /* YDTLuomiAd.m in Sources */,
 				C630E36C2182A61900522A0C /* HttpMessageCenter.m in Sources */,
 				C630E38B2182A61900522A0C /* YDTCorpizeAd.m in Sources */,
 				C6B42C1621B6724A00A19C2F /* BaseTable.m in Sources */,
+				C68CB10121D6246600353DFA /* NaviViewController.m in Sources */,
+				C68CB0F921D623D700353DFA /* WJUrlRequest.m in Sources */,
 				C630E3772182A61900522A0C /* YDTLuomiAdModel.m in Sources */,
 				C6CD06A221C9E6C000EA2A33 /* NSObject+AvoidCrash.m in Sources */,
 				76E485962178288E007C9E76 /* ViewController.m in Sources */,
@@ -1084,6 +1146,7 @@
 				C630E3842182A61900522A0C /* YDTAdvertisingView.m in Sources */,
 				C6CD06CA21C9ECC600EA2A33 /* DataContainer.m in Sources */,
 				C630E37D2182A61900522A0C /* YDTAdvertisingCellLargeImage.m in Sources */,
+				C68CB10221D6246600353DFA /* SecondViewController.m in Sources */,
 				C630E37F2182A61900522A0C /* YDTAdvertisingCellLargeImageTitle.m in Sources */,
 				C6B42C1821B6724A00A19C2F /* ArticleTable.m in Sources */,
 				C6CD06A321C9E6C000EA2A33 /* NSMutableArray+AvoidCrash.m in Sources */,

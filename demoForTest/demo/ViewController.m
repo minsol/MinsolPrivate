@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate+RegisterRoute.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -23,7 +22,8 @@
     [self.view addSubview:self.tableView];
     self.testControllerArray = @[
                                  @{@"title":@"圆角",@"controller":@"CornerRadiusViewController"},
-                                 @{@"title":@"路由",@"controller":@"AppRoutesViewController"}];
+                                 @{@"title":@"AppRoutes路由",@"controller":@"AppRoutesViewController"},
+                                 @{@"title":@"WJRouter路由",@"controller":@"SecondViewController"}];
 }
 
 
@@ -47,13 +47,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dic = self.testControllerArray[indexPath.row];
-//    Class class = NSClassFromString(dic[@"controller"]);
-//    UIViewController *nextVC = [[class alloc] init];
-//    [self.navigationController pushViewController:nextVC animated:true];
-    
-    NSString *url = [NSString stringWithFormat:@"%@://push/%@",RouteDemo,dic[@"controller"]];
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [appDelegate openURLString:url];
+    Class class = NSClassFromString(dic[@"controller"]);
+    UIViewController *nextVC = [[class alloc] init];
+    [self.navigationController pushViewController:nextVC animated:true];    
+//    NSString *url = [NSString stringWithFormat:@"%@://push/%@",RouteDemo,dic[@"controller"]];
+//    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    [appDelegate openURLString:url];
 }
 
 

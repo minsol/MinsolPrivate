@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "AppDelegate+RegisterRoute.h"
+#import "WJUrlRouterManager.h"
 
 @interface AppDelegate ()
 
@@ -18,13 +17,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    self.window.rootViewController = navi;
-    [self.window makeKeyAndVisible];
-    [self registerRouteWithScheme:RouteDemo];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    WJUrlRequest *request = [WJUrlRequest requestWithUrlString:@"WJRouter://root/ViewController" withParameters:@{@"navigation":@"NaviViewController"}];
+    [[WJUrlRouterManager sharedManager] openURLWithRequest:request completionHandler:nil];
+
+//    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+//    self.window.rootViewController = navi;
+//    [self.window makeKeyAndVisible];
+//    [self registerRouteWithScheme:RouteDemo];
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    if ([[url.scheme lowercaseString] isEqualToString:[@"WJRouter" lowercaseString]]) {
+        return [[WJUrlRouterManager sharedManager] openURL:url];
+    }
+    return true;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
