@@ -640,12 +640,12 @@
 		C68CB0EE21D623D700353DFA /* WJRouter */ = {
 			isa = PBXGroup;
 			children = (
-				C68CB0EF21D623D700353DFA /* WJUrlRouterManager.h */,
-				C68CB0F021D623D700353DFA /* WJUrlRequestHander.h */,
 				C68CB0F121D623D700353DFA /* WJUrlRequest.h */,
-				C68CB0F221D623D700353DFA /* WJUrlRequestHander.m */,
-				C68CB0F321D623D700353DFA /* WJUrlRouterManager.m */,
 				C68CB0F421D623D700353DFA /* WJUrlRequest.m */,
+				C68CB0F021D623D700353DFA /* WJUrlRequestHander.h */,
+				C68CB0F221D623D700353DFA /* WJUrlRequestHander.m */,
+				C68CB0EF21D623D700353DFA /* WJUrlRouterManager.h */,
+				C68CB0F321D623D700353DFA /* WJUrlRouterManager.m */,
 			);
 			path = WJRouter;
 			sourceTree = "<group>";
