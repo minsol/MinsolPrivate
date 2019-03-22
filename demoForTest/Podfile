@@ -3,27 +3,27 @@ source 'https://github.com/minsol/MinsolSpec.git'   # 私有库
 
 # 这用于开发库的时候本地使用
 target 'demo' do
-# Pods for demo
-    pod 'InMobiSDK', '~> 7.0.1'
-    pod 'Masonry', '~> 1.1.0'
-    pod 'OpenUDID', '~> 1.0.0'
-#    pod 'AFNetworking', '~> 3.1.0'#使用大于等于3.1.0 但小于3.2.0的版本
-    pod 'AFNetworking'
-    pod 'SDWebImage', '>= 4.0.0'
-    pod 'GDTMobSDK', '~> 4.8.1' #这里改成你想要的版本号
-    pod 'FMDB'
-    pod 'JLRoutes'
+    # Pods for demo
+     pod 'InMobiSDK', '~> 7.0.1'
+     pod 'Masonry', '~> 1.1.0'
+     pod 'OpenUDID', '~> 1.0.0'
+     pod 'AFNetworking', '~> 3.1.0'#使用大于等于3.1.0 但小于3.2.0的版本
+     pod 'AFNetworking'
+     pod 'SDWebImage', '>= 4.0.0'
+     pod 'GDTMobSDK', '~> 4.8.1' #这里改成你想要的版本号
+     pod 'FMDB'
+     pod 'JLRoutes'
 end
 
 #这个用于测试本地库和远程库
 target 'DemoForTestPod' do
     # Pods for DemoForTestPod
-    #    pod 'TestLib'
-    #    pod 'YDTAppPrivate'
-    #    pod 'YDTAdvertising', :path => "/Users/minsol/Desktop/MinsolPrivate/YDTAdvertising"
-#        pod 'YDTAdvertising'
-#        pod 'A8HttpMessage'
-        pod 'A8CycleScrollView'
-        pod 'A8FMDB'
-        pod 'SecurityAdaptor'
+    #   pod 'TestLib'
+    #   pod 'YDTAppPrivate'
+    #   pod 'YDTAdvertising', :path => "/Users/minsol/Desktop/MinsolPrivate/YDTAdvertising"
+    #   pod 'YDTAdvertising'
+    #   pod 'A8HttpMessage'
+    #   pod 'A8CycleScrollView'
+    #   pod 'A8FMDB'
+    #   pod 'SecurityAdaptor'
 end
