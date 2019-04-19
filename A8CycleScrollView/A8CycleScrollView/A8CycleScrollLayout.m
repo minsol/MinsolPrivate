@@ -8,8 +8,9 @@
 
 #import "A8CycleScrollLayout.h"
 
-#define kSpacing 50
-#define kMargin 8
+#define kZoomSpacing 8 ///放大后实际 item 之间的间距
+#define kSpacing 50 ///实际item 之间的间距
+#define kMargin 8 ///cell 距离 左右两边的距离
 #define kAspectRatio 0.4
 
 @interface A8CycleScrollLayout ()
@@ -25,12 +26,12 @@
     self = [super init];
     if (self) {
         self.minimumLineSpacing  = kSpacing;
-        self.maxWidth = [[UIScreen mainScreen] bounds].size.width - 4*kMargin;
+        self.maxWidth = [[UIScreen mainScreen] bounds].size.width - 2*kMargin - 2*kZoomSpacing;
         self.maxHeight = self.maxWidth * kAspectRatio;
         self.itemWidth = [[UIScreen mainScreen] bounds].size.width - 2*kMargin - 2*kSpacing;
         self.itemHeight = self.itemWidth * kAspectRatio;
         CGFloat inset = kMargin + kSpacing;
-        self.sectionInset = UIEdgeInsetsMake(0, inset, kMargin, inset);
+        self.sectionInset = UIEdgeInsetsMake(0, inset, 0, inset);
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.itemSize = CGSizeMake(self.itemWidth, self.itemHeight);
         self.pageWidth = self.itemWidth + inset - kMargin;
